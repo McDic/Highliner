@@ -5,6 +5,7 @@
         "minecraft:light_blue_concrete_powder",
         "minecraft:light_blue_terracotta",
         "minecraft:diamond_ore",
-        "minecraft:stripped_warped_hyphae"
+        "minecraft:stripped_warped_hyphae",
+        "minecraft:diamond_block"
     ]
 }
