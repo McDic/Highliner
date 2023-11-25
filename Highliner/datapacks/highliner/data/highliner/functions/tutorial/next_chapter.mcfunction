@@ -11,7 +11,7 @@ execute if score !current_tutorial_chapter constants matches 0 run scoreboard pl
 execute if score !current_tutorial_chapter constants matches 1 run scoreboard players set !tutorial_timer_max constants 280
 execute if score !current_tutorial_chapter constants matches 2 run scoreboard players set !tutorial_timer_max constants 360
 execute if score !current_tutorial_chapter constants matches 3 run scoreboard players set !tutorial_timer_max constants 640
-execute if score !current_tutorial_chapter constants matches 4 run scoreboard players set !tutorial_timer_max constants 440
+execute if score !current_tutorial_chapter constants matches 4 run scoreboard players set !tutorial_timer_max constants 620
 execute if score !current_tutorial_chapter constants matches 5 run scoreboard players set !tutorial_timer_max constants 300
 
 execute if score !current_tutorial_chapter constants < !max_tutorial_chapters constants run function highliner:tutorial/main
