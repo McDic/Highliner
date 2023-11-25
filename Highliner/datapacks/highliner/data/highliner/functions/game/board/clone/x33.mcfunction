@@ -1,0 +1,9 @@
+execute positioned ~-4 ~ ~-4 run function highliner:game/board/clone/single
+execute positioned ~00 ~ ~-4 run function highliner:game/board/clone/single
+execute positioned ~04 ~ ~-4 run function highliner:game/board/clone/single
+execute positioned ~-4 ~ ~ run function highliner:game/board/clone/single
+execute positioned ~00 ~ ~ run function highliner:game/board/clone/single
+execute positioned ~04 ~ ~ run function highliner:game/board/clone/single
+execute positioned ~-4 ~ ~4 run function highliner:game/board/clone/single
+execute positioned ~00 ~ ~4 run function highliner:game/board/clone/single
+execute positioned ~04 ~ ~4 run function highliner:game/board/clone/single

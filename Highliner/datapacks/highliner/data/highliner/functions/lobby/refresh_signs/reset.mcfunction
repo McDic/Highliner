@@ -1,0 +1,1 @@
+data merge block 1 90 0 {front_text: {messages: ['{"text":""}', '{"translate":"highliner.lobby.sign.reset.l2","color":"yellow","bold":true,"clickEvent":{"action":"run_command","value":"/trigger lobbytrigger set 8"}}', '{"translate":"highliner.lobby.sign.reset.l3","color":"yellow","bold":true}', '{"text":""}']}}

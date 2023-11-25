@@ -1,0 +1,1 @@
+title @a subtitle {"translate":"highliner.tutorial.entry.subtitle","color":"yellow","italic":true}

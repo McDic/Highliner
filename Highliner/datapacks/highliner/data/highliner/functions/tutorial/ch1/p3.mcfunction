@@ -1,0 +1,1 @@
+tellraw @a {"translate":"highliner.tutorial.ch1.p3","color":"yellow","italic":true}

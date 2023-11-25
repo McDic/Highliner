@@ -1,0 +1,17 @@
+# Unnecessary map files
+Highliner/*
+!Highliner/datapacks
+# Highliner/datapacks/**/.git/**/*
+
+# Server files
+libraries/
+logs/
+versions/
+banned-ips.json
+banned-players.json
+eula.txt
+minecraft_server.*.jar
+ops.json
+server.properties
+usercache.json
+whitelist.json
