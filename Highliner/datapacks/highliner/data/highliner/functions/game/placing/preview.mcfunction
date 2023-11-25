@@ -29,6 +29,8 @@ execute as @e[type=minecraft:slime,name="placing_preview",scores={placing_dz=3}]
 # Check placeable
 execute at @s store result score !is_not_placeable constants run function highliner:game/board/check/is_not_placeable
 execute unless score !is_not_placeable constants matches 0 run function highliner:game/placing/display_placeable/impossible
+execute if score !is_not_placeable constants matches 1 as @e[type=minecraft:slime,name="placing_preview"] run data modify entity @s Glowing set value false
+execute unless score !is_not_placeable constants matches 1 as @e[type=minecraft:slime,name="placing_preview"] run data modify entity @s Glowing set value true
 function highliner:game/get_turn
 execute if score !is_not_placeable constants matches 0 if score !is_red_turn constants matches 1 run function highliner:game/placing/display_placeable/red
 execute if score !is_not_placeable constants matches 0 unless score !is_red_turn constants matches 1 run function highliner:game/placing/display_placeable/blue

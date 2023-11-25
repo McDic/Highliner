@@ -1,7 +1,7 @@
 schedule clear highliner:game/progress/start_turn/wait
 
 function highliner:game/board/refresh
-function highliner:game/progress/calculate_score
+function highliner:game/progress/calculate_score/main
 function highliner:game/placing/init
 
 schedule clear highliner:game/progress/timer/reduce

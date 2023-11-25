@@ -1,6 +1,6 @@
 # 0 tie, 1 red wins, 2 blue wins
 function highliner:game/board/refresh
-function highliner:game/progress/calculate_score
+function highliner:game/progress/calculate_score/main
 scoreboard players set !gameresult constants 0
 execute if score !claimed_red constants > !claimed_blue constants run scoreboard players set !gameresult constants 1
 execute if score !claimed_red constants < !claimed_blue constants run scoreboard players set !gameresult constants 2

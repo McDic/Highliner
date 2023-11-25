@@ -11,5 +11,5 @@ scoreboard players set !in_turn constants 0
 schedule clear highliner:game/progress/timer/reduce
 function highliner:game/progress/timer/update
 
-execute if score !turn constants <= !max_turn constants run schedule function highliner:game/progress/start_turn/entry 3s
-execute if score !turn constants > !max_turn constants run schedule function highliner:game/finalize/determine 3s append
+execute if score !turn constants <= !max_turn constants run schedule function highliner:game/progress/start_turn/entry 2s
+execute if score !turn constants > !max_turn constants run schedule function highliner:game/finalize/determine 2s append
