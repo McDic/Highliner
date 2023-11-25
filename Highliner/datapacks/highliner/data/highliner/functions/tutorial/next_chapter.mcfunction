@@ -4,12 +4,13 @@ schedule clear highliner:game/board/refresh
 execute as @e[type=minecraft:slime,name="placing_preview"] run data modify entity @s Glowing set value false
 
 scoreboard players add !current_tutorial_chapter constants 1
+execute if score !current_tutorial_chapter constants matches ..-1 run scoreboard players set !current_tutorial_chapter constants 0
 scoreboard players set !tutorial_timer constants 0
 
 execute if score !current_tutorial_chapter constants matches 0 run scoreboard players set !tutorial_timer_max constants 180
 execute if score !current_tutorial_chapter constants matches 1 run scoreboard players set !tutorial_timer_max constants 280
 execute if score !current_tutorial_chapter constants matches 2 run scoreboard players set !tutorial_timer_max constants 360
-execute if score !current_tutorial_chapter constants matches 3 run scoreboard players set !tutorial_timer_max constants 520
+execute if score !current_tutorial_chapter constants matches 3 run scoreboard players set !tutorial_timer_max constants 640
 execute if score !current_tutorial_chapter constants matches 4 run scoreboard players set !tutorial_timer_max constants 440
 execute if score !current_tutorial_chapter constants matches 5 run scoreboard players set !tutorial_timer_max constants 300
 

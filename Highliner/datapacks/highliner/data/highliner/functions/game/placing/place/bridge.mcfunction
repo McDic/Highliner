@@ -22,4 +22,3 @@ execute if score !is_red_turn constants matches 0 if score !tile_theme constants
 execute if score !is_red_turn constants matches 0 if score !tile_theme constants matches 5 run fill ~ 73 ~ ~3 73 ~3 minecraft:stripped_warped_hyphae replace minecraft:lime_wool
 execute if score !is_red_turn constants matches 0 if score !tile_theme constants matches 6 run fill ~ 73 ~ ~3 73 ~3 minecraft:diamond_block replace minecraft:lime_wool
 
-execute as @a at @s run playsound minecraft:block.anvil.land master @s ~ ~ ~ 10

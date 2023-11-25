@@ -1,1 +1,2 @@
+scoreboard players set !tutorial_placeable_red constants 0
 function highliner:tutorial/common/placing_preview

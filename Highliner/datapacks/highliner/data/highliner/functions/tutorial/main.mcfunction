@@ -1,5 +1,6 @@
 # Force gamemode to spectator
-gamemode spectator @a[gamemode=!spectator]
+gamemode spectator @a[gamemode=adventure]
+gamemode spectator @a[gamemode=survival]
 
 # Run by chapter
 execute if score !current_tutorial_chapter constants matches 0 run function highliner:tutorial/ch0/main

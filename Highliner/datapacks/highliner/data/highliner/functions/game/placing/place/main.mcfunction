@@ -9,4 +9,6 @@ execute if score !is_not_placeable constants matches 4 run tellraw @s {"translat
 execute unless score !is_not_placeable constants matches 0 run return 0
 
 execute if score !tried_bridging constants matches 0 as @e[type=minecraft:slime,name="placing_preview"] at @s run function highliner:game/placing/place/typical
+execute if score !tried_bridging constants matches 0 if score !gamemode constants matches 1 as @a at @s run playsound minecraft:block.grass.place master @s ~ ~ ~ 10
 execute if score !tried_bridging constants matches 1 as @e[type=minecraft:marker,name="placing_preview",scores={placing=0}] at @s run function highliner:game/placing/place/bridge
+execute if score !tried_bridging constants matches 1 as @a at @s run playsound minecraft:block.anvil.land master @s ~ ~ ~ 10

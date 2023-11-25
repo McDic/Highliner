@@ -4,3 +4,4 @@ execute if score !tutorial_timer constants matches 140 run function highliner:tu
 execute if score !tutorial_timer constants matches 280 run function highliner:tutorial/ch3/p3
 execute if score !tutorial_timer constants matches 360 run function highliner:tutorial/ch3/p4
 execute if score !tutorial_timer constants matches 440 run function highliner:tutorial/ch3/p5
+execute if score !tutorial_timer constants matches 480 run function highliner:tutorial/ch3/p6

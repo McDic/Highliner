@@ -55,8 +55,10 @@
     "highliner.lobby.sign.theme.concrete": "콘크리트",
     "highliner.lobby.sign.theme.concrete_powder": "파우더",
     "highliner.lobby.sign.theme.terracotta": "테라코타",
-    "highliner.lobby.sign.theme.ore": "광물",
+    "highliner.lobby.sign.theme.ore": "광물 원석",
     "highliner.lobby.sign.theme.hyphae": "균사",
+    "highliner.lobby.sign.theme.copper": "구리",
+    "highliner.lobby.sign.theme.mineral": "광물",
     "highliner.tutorial.exit": "좋아요, 즐겁게 게임하세요!",
     "highliner.tutorial.entry.title": "하이라이너 튜토리얼",
     "highliner.tutorial.entry.subtitle": "McDic 제작",
@@ -72,8 +74,8 @@
     "highliner.tutorial.ch3.title": "3. 점령",
     "highliner.tutorial.ch3.p1": "당신의 타일들로 닫힌 공간을 만들게 되면, 그 안에 있는 타일들을 점령하게 됩니다.",
     "highliner.tutorial.ch3.p3": "한번 점령된 타일은 게임이 끝날 때까지 뺏기지 않습니다!",
-    "highliner.tutorial.ch3.p4": "점수가 똑같으면 더 많이 점령한 사람이 이기게 됩니다!",
-    "highliner.tutorial.ch3.p5": "보드의 맨 끝을 이용해서 둘러싸는 것은 점령으로 판정되지 않음에 유의해주세요.",
+    "highliner.tutorial.ch3.p5": "점수가 똑같으면 더 많이 점령한 사람이 이기게 됩니다!",
+    "highliner.tutorial.ch3.p6": "보드의 맨 끝을 이용해서 둘러싸는 것은 점령으로 판정되지 않음에 유의해주세요.",
     "highliner.tutorial.ch4.title": "4. 브릿징 (타일 뺏기)",
     "highliner.tutorial.ch4.p1": "당신은 당신의 타일 2개 사이에 놓여 있는 적군의 타일을 \"브릿징\"을 통해 뺏어올 수 있습니다.",
     "highliner.tutorial.ch4.p3": "지금 보실 수 있듯이, 브릿징은 점령을 하는 데 유용합니다.",
@@ -91,5 +93,9 @@
     "highliner.gamestatus.settings.x22.disabled": "- 2x2 설치가 허용되지 않습니다.",
     "highliner.gamestatus.settings.forced_first_player.nonrandom": "- 첫 턴 플레이어는 %s입니다.",
     "highliner.gamestatus.settings.forced_first_player.random": "- 첫 턴 플레이어는 랜덤으로 결정됩니다.",
-    "highliner.gamestatus.settings.theme": "- 타일 테마: %s"
+    "highliner.gamestatus.settings.theme": "- 타일 테마: %s",
+    "highliner.item.name.rotate": "타일 회전하기 (%s)",
+    "highliner.item.name.place": "타일 설치하기 (%s)",
+    "highliner.item.name.surrender": "기권하기 (%s)",
+    "highliner.item.name.map": "지도"
 }
