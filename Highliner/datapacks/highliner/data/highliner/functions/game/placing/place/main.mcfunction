@@ -5,7 +5,7 @@ execute if score !is_not_placeable constants matches 1 run tellraw @s {"translat
 execute if score !is_not_placeable constants matches 2 run tellraw @s {"translate":"highliner.error.cantplace.general", "color":"yellow", "italic":true}
 execute if score !is_not_placeable constants matches 3 run tellraw @s {"translate":"highliner.error.cantplace.useless", "color":"yellow", "italic":true}
 execute if score !is_not_placeable constants matches 4 run tellraw @s {"translate":"highliner.error.cantplace.2x2", "color":"yellow", "italic":true}
-# tellraw @a {"text":"DEBUG on ../place/main: ","extra":[{"score":{"name":"!is_not_placeable","objective":"constants"}}]}
+execute unless score !is_not_placeable constants matches 0 as @a[team=!spectators,scores={turn=1}] at @s run playsound minecraft:entity.villager.no master @s
 execute unless score !is_not_placeable constants matches 0 run return 0
 
 execute if score !tried_bridging constants matches 0 as @e[type=minecraft:slime,name="placing_preview"] at @s run function highliner:game/placing/place/typical
