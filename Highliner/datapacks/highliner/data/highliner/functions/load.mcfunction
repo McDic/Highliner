@@ -149,7 +149,7 @@ function highliner:settings/forced_first_player
 function highliner:settings/tile_theme
 
 # Board
-# function highliner:game/board/reset/all
+function highliner:game/board/reset/all
 
 # Bossbar
 function highliner:game/bossbar/clear

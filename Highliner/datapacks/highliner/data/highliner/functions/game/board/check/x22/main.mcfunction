@@ -27,6 +27,7 @@ execute if score !placing_direction constants matches -1 store result score !x22
 execute if score !placing_direction constants matches -1 store result score !x22_h constants positioned ~00 ~ ~04 run function highliner:game/board/check/x22/single
 
 # Recover original information
+function highliner:game/board/clone/single
 execute if score !placing_direction constants matches 1 positioned ~-4 ~ ~ run function highliner:game/board/clone/single
 execute if score !placing_direction constants matches 1 positioned ~04 ~ ~ run function highliner:game/board/clone/single
 execute if score !placing_direction constants matches -1 positioned ~ ~ ~-4 run function highliner:game/board/clone/single

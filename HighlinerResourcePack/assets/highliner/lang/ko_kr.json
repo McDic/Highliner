@@ -85,6 +85,7 @@
     "highliner.tutorial.ch5.title": "5. 2x2 규칙",
     "highliner.tutorial.ch5.p1": "게임을 좀 더 전략적으로 만들기 위해 고안된 2x2 규칙을 소개합니다!",
     "highliner.tutorial.ch5.p2": "당신은 당신이 설치한 일반 타일들끼리 2x2가 되도록 당신의 타일을 설치할 수 없습니다.",
+    "highliner.tutorial.ch5.p3": "이 규칙은 브릿징에도 적용됩니다!",
     "highliner.bossbar.relative_score": "당신의 상대 점수",
     "highliner.bossbar.time_left_spec": "%s의 남은 시간",
     "highliner.lobby.author_blog": "맵 제작자의 블로그를 보시려면 여기를 클릭하세요.",

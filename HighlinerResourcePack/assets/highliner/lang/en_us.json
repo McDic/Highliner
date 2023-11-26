@@ -85,6 +85,7 @@
     "highliner.tutorial.ch5.title": "5. 2x2 Rule",
     "highliner.tutorial.ch5.p1": "To make the game more strategic, I introduced the 2x2 rule!",
     "highliner.tutorial.ch5.p2": "You can't place a tile that would create a 2x2 area of your non-dominated tiles.",
+    "highliner.tutorial.ch5.p3": "This rule is applied to the bridging too!",
     "highliner.bossbar.relative_score": "Your score (Relative)",
     "highliner.bossbar.time_left_spec": "%s's time left",
     "highliner.lobby.author_blog": "Click here to see the author's blog.",
