@@ -1,7 +1,8 @@
-data modify storage highliner:temp_storage temp_pos set value [0.0d, 73.0d, 0.0d]
-data modify storage highliner:temp_storage temp_pos[0] set from storage highliner:temp_storage temp_prev_state.x
-data modify storage highliner:temp_storage temp_pos[2] set from storage highliner:temp_storage temp_prev_state.z
-data modify entity @s Pos set from storage highliner:temp_storage temp_pos
+# data modify storage highliner:temp_storage temp_pos set value [0.0d, 73.0d, 0.0d]
+# data modify storage highliner:temp_storage temp_pos[0] set from storage highliner:temp_storage temp_prev_state.x
+# data modify storage highliner:temp_storage temp_pos[2] set from storage highliner:temp_storage temp_prev_state.z
+# data modify entity @s Pos set from storage highliner:temp_storage temp_pos
+$tp @s $(x) 73 $(z)
 
 # Is bridge?
 scoreboard players set !prev_tile_is_bridge constants 0

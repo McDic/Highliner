@@ -170,7 +170,7 @@ function highliner:game/board/reset/all
 function highliner:game/bossbar/clear
 
 # Destroy all records anyway
-function highliner:game/record/destroy
+# function highliner:game/record/destroy
 
 # Create lobby again
 function highliner:lobby/create/idle

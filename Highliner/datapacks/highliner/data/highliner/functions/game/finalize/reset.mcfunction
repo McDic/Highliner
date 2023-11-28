@@ -3,9 +3,6 @@ worldborder center 0.0 0.0
 worldborder set 20 1
 worldborder warning distance 0
 
-# Dump the current match
-function highliner:game/record/dump
-
 # Scoreboard
 scoreboard objectives remove turn
 scoreboard objectives add turn dummy

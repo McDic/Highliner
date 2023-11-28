@@ -11,7 +11,7 @@ execute unless score !is_not_placeable constants matches 0 run return 0
 # Construct the diff and cache all previous state, for actual gaming.
 execute if score !gamemode constants matches 1 run function highliner:game/record/diff/construct
 execute if score !gamemode constants matches 1 run function highliner:game/board/clone/all
-execute if score !gamemode constants matches 1 run clone -58 71 -58 57 68 71 -58 68 -58
+execute if score !gamemode constants matches 1 run clone -58 71 -58 57 71 57 -58 68 -58
 
 # Actual filling; placing/preview must be called before.
 execute if score !tried_bridging constants matches 0 as @e[type=minecraft:slime,name="placing_preview"] at @s run function highliner:game/placing/place/typical

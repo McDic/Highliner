@@ -5,6 +5,7 @@ execute as @e[type=minecraft:text_display,tag=lobby_display,nbt={alignment: "cen
 # For some reasons, left arrow and right arrow are flipped.
 execute unless score !current_lobby_menu constants matches -1..3 run scoreboard players set !current_lobby_menu constants 0
 execute as @e[type=minecraft:text_display,tag=lobby_display] run data modify entity @s text set value '{"text":"ERROR","color":"yellow"}'
+execute as @e[tag=lobby_display] run data modify entity @s billboard set value "fixed"
 execute as @e[type=minecraft:item_display,tag=lobby_display,tag=lobby_display_leftarrow] run data modify entity @s item.id set value "minecraft:iron_chestplate"
 execute as @e[type=minecraft:item_display,tag=lobby_display,tag=lobby_display_rightarrow] run data modify entity @s item.id set value "minecraft:golden_chestplate"
 execute as @e[type=minecraft:item_display,tag=lobby_display,tag=lobby_display_down] run data modify entity @s item.id set value "minecraft:golden_boots"
