@@ -109,11 +109,11 @@ scoreboard players set !gamespeed constants 0
 scoreboard players set !disable_x22 constants 0
 scoreboard players set !display_tester constants 0
 scoreboard players set !timer constants -1
-scoreboard players set !lobby_locked constants 0
 scoreboard players set !forced_first_player constants -1
 scoreboard players set !tile_theme constants -1
 scoreboard players set !current_lobby_menu constants 0
 scoreboard players set !current_lobby_selection constants 4
+scoreboard players set !instant_placing constants -1
 
 # Teams
 team remove spectators
@@ -151,6 +151,7 @@ function highliner:settings/gamespeed
 function highliner:settings/x22
 function highliner:settings/forced_first_player
 function highliner:settings/tile_theme
+function highliner:settings/instant_placing
 
 # Board
 function highliner:game/board/reset/all

@@ -6,9 +6,8 @@ clear @a
 gamemode spectator @a[team=spectators]
 
 # Disable triggers
-scoreboard objectives remove lobbytrigger
-scoreboard objectives add lobbytrigger trigger
-scoreboard players reset @a lobbytrigger
+scoreboard objectives remove lobbytrigger_v2
+scoreboard objectives add lobbytrigger_v2 dummy
 
 # Scores
 scoreboard players set !gamemode constants 1

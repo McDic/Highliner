@@ -9,5 +9,4 @@ execute if score !gamespeed constants matches 1 run scoreboard players set !game
 execute if score !gamespeed constants matches 1 run scoreboard players set !gamespeed_addtime constants 10
 execute if score !gamespeed constants matches 2 run scoreboard players set !gamespeed_maxtime constants 90
 execute if score !gamespeed constants matches 2 run scoreboard players set !gamespeed_addtime constants 5
-# setblock 1 91 -1 minecraft:oak_wall_sign[facing=east] destroy
-function highliner:lobby/refresh_signs/gamespeed
+execute if score !gamemode constants matches 0 run function highliner:lobby/refresh_displays/all

@@ -3,8 +3,8 @@ function highliner:lobby/create/nonidle
 function highliner:game/board/reset/all
 
 # Scoreboard
-scoreboard objectives remove lobbytrigger
-scoreboard objectives add lobbytrigger trigger
+scoreboard objectives remove lobbytrigger_v2
+scoreboard objectives add lobbytrigger_v2 dummy
 scoreboard players set !gamemode constants 2
 scoreboard players set !current_tutorial_chapter constants -1
 scoreboard players set !tutorial_placeable_red constants 0

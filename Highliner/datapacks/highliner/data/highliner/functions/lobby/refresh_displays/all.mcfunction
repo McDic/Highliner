@@ -49,4 +49,4 @@ execute if score !current_lobby_menu constants matches 3 run function highliner:
 
 # Schedule
 schedule clear highliner:lobby/refresh_displays/all
-schedule function highliner:lobby/refresh_displays/all 1.5s
+schedule function highliner:lobby/refresh_displays/all 1.2s

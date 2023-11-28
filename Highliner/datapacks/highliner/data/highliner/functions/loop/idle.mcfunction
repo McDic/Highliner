@@ -20,8 +20,8 @@ execute as @e[type=minecraft:interaction,tag=lobby_interaction_down] on attacker
 execute as @e[type=minecraft:interaction,tag=lobby_interaction_down] on target run scoreboard players set @s lobbytrigger_v2 3
 execute as @e[type=minecraft:interaction,tag=lobby_interaction_rightarrow] on attacker run scoreboard players set @s lobbytrigger_v2 4
 execute as @e[type=minecraft:interaction,tag=lobby_interaction_rightarrow] on target run scoreboard players set @s lobbytrigger_v2 4
-execute if score !lobby_locked constants matches 1 if entity @p[scores={lobbytrigger_v2=1..}] run tellraw @a[scores={lobbytrigger_v2=1..}] {"translate":"highliner.lobby.message.locked","color":"yellow","italic":true}
-execute if score !lobby_locked constants matches 1 run scoreboard players set @a lobbytrigger_v2 0
+execute if entity @p[tag=lobby_lock] if entity @p[tag=!lobby_lock,scores={lobbytrigger_v2=1..}] run tellraw @a[tag=!lobby_lock,scores={lobbytrigger_v2=1..}] {"translate":"highliner.lobby.message.locked","color":"yellow","italic":true}
+execute if entity @p[tag=lobby_lock] run scoreboard players set @a[tag=!lobby_lock] lobbytrigger_v2 0
 scoreboard players set !concurrent_triggers constants 0
 execute as @a[scores={lobbytrigger_v2=1..}] run scoreboard players add !concurrent_triggers constants 1
 execute if score !concurrent_triggers constants matches 2.. run tellraw @a[scores={lobbytrigger_v2=1..}] {"translate":"highliner.lobby.message.duplicated","color":"yellow","italic":true}
