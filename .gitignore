@@ -2,7 +2,7 @@
 Highliner/*
 !Highliner/datapacks
 # Highliner/datapacks/**/.git/**/*
-!HighlinerResourcePackv.*/*
+!HighlinerResourcePack*/*
 
 # Server files
 libraries/
