@@ -1,3 +1,1 @@
-clone 9 80 -2 -6 80 9 -6 73 -2
-fill -6 73 -2 9 73 9 minecraft:light_blue_wool replace minecraft:red_wool
-function highliner:game/board/check/domination/main
+summon minecraft:text_display ~ ~ ~ {text: '{"text":"Highliner - Made by McDic"}', text_opacity: 255, background: 0, alignment: "center", line_width: 210, default_background: false, transformation: [1f, 0f, 0f, 0f, 0f, 1f, 0f, 0f, 0f, 0f, 1f, 0f, 0f, 0f, 0f, 1f]}

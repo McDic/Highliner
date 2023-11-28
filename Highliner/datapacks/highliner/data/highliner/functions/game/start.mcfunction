@@ -34,7 +34,7 @@ execute as @a at @s run playsound minecraft:entity.player.levelup master @s
 title @a times 0s 2s 2s
 
 # Change lobby
-function highliner:lobby/create_nonidle
+function highliner:lobby/create/nonidle
 
 # Bossbar
 function highliner:game/bossbar/clear

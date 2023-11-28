@@ -18,11 +18,7 @@ scoreboard players operation @a welcome += !0 constants
 execute if score !gamemode constants matches 0 run function highliner:loop/idle
 execute if score !gamemode constants matches 1 run function highliner:loop/ingame
 execute if score !gamemode constants matches 2 run function highliner:loop/tutorial
+execute if score !gamemode constants matches 3 run function highliner:loop/replay
 
-# Debugging
-scoreboard players operation !tutorial_placeable_red debug = !tutorial_placeable_red constants
-scoreboard players operation !is_red_turn debug = !is_red_turn constants
-scoreboard players operation !gamemode debug = !gamemode constants
-
-# Localization
-scoreboard players operation @a localization += !0 constants
+# Floor changing is always active
+execute as @a[scores={changed_floor=1..}] at @s run function highliner:settings/toggle_floor

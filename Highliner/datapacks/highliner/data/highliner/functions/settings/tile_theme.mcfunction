@@ -11,7 +11,7 @@ scoreboard players add !tile_theme constants 1
 execute if score !tile_theme constants matches 4 run scoreboard players add !tile_theme constants 1
 execute if score !tile_theme constants matches 7.. run scoreboard players set !tile_theme constants 0
 
-execute if score !gamemode constants matches 0 run setblock -1 90 1 minecraft:oak_wall_sign[facing=south]{front_text: {messages: ['{"text":""}', '{"translate":"highliner.lobby.sign.theme.l2","clickEvent":{"action":"run_command","value":"trigger lobbytrigger set 10"},"color":"yellow","bold":true}', '{"text":""}', '{"text":""}']}} destroy
+# execute if score !gamemode constants matches 0 run setblock -1 90 1 minecraft:oak_wall_sign[facing=south]{front_text: {messages: ['{"text":""}', '{"translate":"highliner.lobby.sign.theme.l2","clickEvent":{"action":"run_command","value":"trigger lobbytrigger set 10"},"color":"yellow","bold":true}', '{"text":""}', '{"text":""}']}} destroy
 
 execute if score !tile_theme constants matches 0 run fill -58 73 -58 57 73 57 minecraft:red_wool replace #highliner:red_tile
 execute if score !tile_theme constants matches 1 run fill -58 73 -58 57 73 57 minecraft:red_concrete replace #highliner:red_tile

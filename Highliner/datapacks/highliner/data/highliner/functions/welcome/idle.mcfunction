@@ -1,3 +1,3 @@
 function highliner:welcome/common
 gamemode adventure @s
-tp @s 0.0 95 0.0 0 90
+tp @s -6 91 -6 -45 0

@@ -1,7 +1,0 @@
-execute if score !tile_theme constants matches ..0 run data modify block -1 90 1 front_text.messages[2] set value '{"translate":"highliner.lobby.sign.theme.wool","color":"yellow","italic":true}'
-execute if score !tile_theme constants matches 1 run data modify block -1 90 1 front_text.messages[2] set value '{"translate":"highliner.lobby.sign.theme.concrete","color":"yellow","italic":true}'
-execute if score !tile_theme constants matches 2 run data modify block -1 90 1 front_text.messages[2] set value '{"translate":"highliner.lobby.sign.theme.concrete_powder","color":"yellow","italic":true}'
-execute if score !tile_theme constants matches 3 run data modify block -1 90 1 front_text.messages[2] set value '{"translate":"highliner.lobby.sign.theme.terracotta","color":"yellow","italic":true}'
-execute if score !tile_theme constants matches 4 run data modify block -1 90 1 front_text.messages[2] set value '{"translate":"highliner.lobby.sign.theme.ore","color":"yellow","italic":true}'
-execute if score !tile_theme constants matches 5 run data modify block -1 90 1 front_text.messages[2] set value '{"translate":"highliner.lobby.sign.theme.hyphae","color":"yellow","italic":true}'
-execute if score !tile_theme constants matches 6 run data modify block -1 90 1 front_text.messages[2] set value '{"translate":"highliner.lobby.sign.theme.mineral","color":"yellow","italic":true}'

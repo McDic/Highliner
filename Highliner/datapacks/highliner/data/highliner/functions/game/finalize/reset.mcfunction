@@ -20,7 +20,7 @@ team empty blueteam
 team join spectators @a[team=!spectators]
 
 # Lobby
-function highliner:lobby/create_idle
+function highliner:lobby/create/idle
 tp @a 0 95 0
 gamemode adventure @a[gamemode=!adventure]
 

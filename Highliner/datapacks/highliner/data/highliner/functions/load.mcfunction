@@ -67,8 +67,6 @@ scoreboard objectives remove temp_variables
 scoreboard objectives add temp_variables dummy
 scoreboard objectives remove welcome
 scoreboard objectives add welcome minecraft.custom:leave_game
-scoreboard objectives remove lobbytrigger
-scoreboard objectives add lobbytrigger trigger
 scoreboard objectives remove current_tile
 scoreboard objectives add current_tile dummy
 scoreboard objectives remove edgeside
@@ -83,8 +81,12 @@ scoreboard objectives remove tried_placing
 scoreboard objectives add tried_placing minecraft.used:minecraft.golden_boots
 scoreboard objectives remove itemdrop
 scoreboard objectives add itemdrop minecraft.custom:minecraft.drop
-scoreboard objectives remove debug
-scoreboard objectives add debug dummy
+scoreboard objectives remove changed_floor
+scoreboard objectives add changed_floor minecraft.used:minecraft.netherite_boots
+scoreboard objectives remove lobbytrigger_v2
+scoreboard objectives add lobbytrigger_v2 dummy
+scoreboard objectives remove interaction_offset
+scoreboard objectives add interaction_offset dummy
 
 # Constants and variables
 scoreboard players set !0 constants 0
@@ -110,6 +112,8 @@ scoreboard players set !timer constants -1
 scoreboard players set !lobby_locked constants 0
 scoreboard players set !forced_first_player constants -1
 scoreboard players set !tile_theme constants -1
+scoreboard players set !current_lobby_menu constants 0
+scoreboard players set !current_lobby_selection constants 4
 
 # Teams
 team remove spectators
@@ -153,3 +157,6 @@ function highliner:game/board/reset/all
 
 # Bossbar
 function highliner:game/bossbar/clear
+
+# Create lobby again
+function highliner:lobby/create/idle

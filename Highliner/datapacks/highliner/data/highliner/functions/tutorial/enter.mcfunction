@@ -1,5 +1,5 @@
 # Destruct lobby
-function highliner:lobby/create_nonidle
+function highliner:lobby/create/nonidle
 function highliner:game/board/reset/all
 
 # Scoreboard
