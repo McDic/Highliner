@@ -1,8 +1,10 @@
+execute if score !gamemode constants matches 1..2 run return 0
+execute if score !gamemode constants matches 3 unless score !current_lobby_menu constants matches 3 run return 0
 execute if score !current_lobby_menu constants matches -1 run return 0
 
-execute if score !current_lobby_menu constants matches 0..2 at @s run playsound minecraft:item.armor.equip_generic master @s ~ ~ ~
+execute at @s run playsound minecraft:item.armor.equip_generic master @a ~ ~ ~
 
-execute if score !current_lobby_menu constants matches 0 if score !current_lobby_selection constants matches 4 run function highliner:game/start_entry
+execute if score !current_lobby_menu constants matches 0 if score !current_lobby_selection constants matches 4 run function highliner:game/start/main
 execute if score !current_lobby_menu constants matches 0 if score !current_lobby_selection constants matches 3 run function highliner:tutorial/enter
 execute store result score !i_am_red constants if entity @s[team=redteam]
 execute store result score !i_am_blue constants if entity @s[team=blueteam]
@@ -20,4 +22,8 @@ execute if score !current_lobby_menu constants matches 2 if score !current_lobby
 execute if score !current_lobby_menu constants matches 2 if score !current_lobby_selection constants matches 2 run function highliner:settings/instant_placing
 execute if score !current_lobby_menu constants matches 2 if score !current_lobby_selection constants matches 1 run reload
 
-execute if score !current_lobby_menu constants matches 3 run tellraw @a {"text": "NOT SUPPORTED YET", "color": "yellow", "italic": true}
+execute if score !current_lobby_menu constants matches 3 if score !gamemode constants matches 0 if score !current_lobby_selection constants matches 2 run function highliner:replay/start
+execute if score !current_lobby_menu constants matches 3 if score !gamemode constants matches 0 if score !current_lobby_selection constants matches 1 run function highliner:replay/choose_target
+execute if score !current_lobby_menu constants matches 3 if score !gamemode constants matches 3 if score !current_lobby_selection constants matches 3 run function highliner:replay/quit
+execute if score !current_lobby_menu constants matches 3 if score !gamemode constants matches 3 if score !current_lobby_selection constants matches 2 run function highliner:settings/replay_jump_speed
+execute if score !current_lobby_menu constants matches 3 if score !gamemode constants matches 3 if score !current_lobby_selection constants matches 1 run tellraw @a {"text":"NOT IMPLEMENTED YET","color":"yellow","bold":true}

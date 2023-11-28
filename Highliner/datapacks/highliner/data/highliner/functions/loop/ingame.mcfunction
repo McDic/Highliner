@@ -1,4 +1,4 @@
-execute as @a[scores={welcome=0}] at @s run function highliner:welcome/ingame
+execute as @a[scores={welcome=0..}] at @s run function highliner:welcome/ingame
 clear @a[team=spectators]
 clear @a[team=!spectators,scores={turn=-1}] minecraft:iron_boots
 clear @a[team=!spectators,scores={turn=-1}] minecraft:golden_boots

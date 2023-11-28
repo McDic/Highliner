@@ -1,8 +1,5 @@
 # Common
-execute as @e[tag=lobby_display] run data modify entity @s view_range set value 0.25f
-execute as @e[tag=lobby_display] run data modify entity @s teleport_duration set value 1
-execute as @e[tag=lobby_display] run data modify entity @s interpolation_duration set value 1
-execute as @e[tag=lobby_display] run data modify entity @s brightness set value {block: 15, sky: 15}
+execute as @e[tag=lobby_display] run function highliner:lobby/refresh_displays/set_display_data
 execute as @e[type=minecraft:text_display,tag=lobby_display,nbt={alignment: "center"}] run data modify entity @s line_width set value 99999
 
 # For some reasons, left arrow and right arrow are flipped.
@@ -18,34 +15,38 @@ execute as @e[type=minecraft:item_display,tag=lobby_display,tag=lobby_display_ch
 # - Join Blue Team
 # - Start Game
 # - Start Tutorial
-execute if score !current_lobby_menu constants matches 0 run function highliner:lobby/refresh_displays/menu_main
+execute if score !current_lobby_menu constants matches 0 run function highliner:lobby/refresh_displays/menu/main
 
 # Lobby menu -1: Credits
 # - Map Maker: McDic
 # - Resource Pack Authors: kayan4036 / McDic / RanolP
 # - Good Testers: RanolP, ...
 # - Highliner League Organizers: Protoss, ...
-execute if score !current_lobby_menu constants matches -1 run function highliner:lobby/refresh_displays/menu_credits
+execute if score !current_lobby_menu constants matches -1 run function highliner:lobby/refresh_displays/menu/credits
 
 # Lobby menu 1: Settings (1)
 # - Game Speed: 180s / 10s
 # - Max Turn: 120 turns
 # - 2x2 Rule: Disallowed
 # - First Player: Random
-execute if score !current_lobby_menu constants matches 1 run function highliner:lobby/refresh_displays/menu_settings1
+execute if score !current_lobby_menu constants matches 1 run function highliner:lobby/refresh_displays/menu/settings1
 
 # Lobby menu 2: Settings (2)
 # - Tile Theme: Wool
 # - Instant Placing: Enabled
 # - [WARNING] Reset Everything
-execute if score !current_lobby_menu constants matches 2 run function highliner:lobby/refresh_displays/menu_settings2
+execute if score !current_lobby_menu constants matches 2 run function highliner:lobby/refresh_displays/menu/settings2
 
-# Lobby menu 3: Replay mode
-# - Start(Exit) Replay Mode
-# - Selected Match: 3rd last match
-# - [Turn 10 / 120] Timer: 10 seconds, 27 seconds
-# - Start game from the current state
-execute if score !current_lobby_menu constants matches 3 run function highliner:lobby/refresh_displays/menu_replay
+# Lobby menu 3 / Gamemode 0: Replay entry
+# - Start Replay Mode
+# - Selected Match ID: 123-456-789-000
+execute if score !current_lobby_menu constants matches 3 if score !gamemode constants matches 0 run function highliner:lobby/refresh_displays/menu/replay_entry
+
+# Lobby menu 3 / Gamemode 3: Replay inner
+# - Exit Replay Mode
+# - Selected Jump Speed: 1 turn
+# - Start Game from Here
+execute if score !current_lobby_menu constants matches 3 if score !gamemode constants matches 3 run function highliner:lobby/refresh_displays/menu/replay_in
 
 # Schedule
 schedule clear highliner:lobby/refresh_displays/all

@@ -5,7 +5,7 @@ execute unless entity @p[team=redteam] if entity @p[team=blueteam] run title @a 
 function highliner:game/bossbar/update
 
 # Surrender?
-function highliner:game/check_both_players
+execute store result score !both_player_exists constants run function highliner:game/check_both_players
 execute as @a[team=!spectators,scores={try_surrendered=1..}] run function highliner:game/surrender/confirm
 execute as @a[team=!spectators,scores={surrendered=-1}] run function highliner:game/surrender/cancel
 

@@ -3,6 +3,9 @@ worldborder center 0.0 0.0
 worldborder set 20 1
 worldborder warning distance 0
 
+# Dump the current match
+function highliner:game/record/dump
+
 # Scoreboard
 scoreboard objectives remove turn
 scoreboard objectives add turn dummy
@@ -13,6 +16,7 @@ function highliner:game/board/reset/bottom
 
 # Schedule and timer
 schedule clear highliner:game/progress/timer/reduce
+schedule clear highliner:game/record/diff/flush
 
 # Team
 team empty redteam

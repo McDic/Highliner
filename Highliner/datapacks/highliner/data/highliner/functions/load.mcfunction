@@ -87,9 +87,14 @@ scoreboard objectives remove lobbytrigger_v2
 scoreboard objectives add lobbytrigger_v2 dummy
 scoreboard objectives remove interaction_offset
 scoreboard objectives add interaction_offset dummy
+scoreboard objectives remove used_item_backward
+scoreboard objectives add used_item_backward minecraft.used:minecraft.iron_chestplate
+scoreboard objectives remove used_item_forward
+scoreboard objectives add used_item_forward minecraft.used:minecraft.golden_chestplate
 
 # Constants and variables
 scoreboard players set !0 constants 0
+scoreboard players set !1 constants 1
 scoreboard players set !-1 constants -1
 scoreboard players set !2 constants 2
 scoreboard players set !3 constants 3
@@ -114,6 +119,9 @@ scoreboard players set !tile_theme constants -1
 scoreboard players set !current_lobby_menu constants 0
 scoreboard players set !current_lobby_selection constants 4
 scoreboard players set !instant_placing constants -1
+scoreboard players set !max_match_saves constants 20
+scoreboard players set !selected_replay_index constants -1
+scoreboard players set !replay_jump_speed constants 0
 
 # Teams
 team remove spectators
@@ -144,6 +152,7 @@ advancement revoke @a everything
 # Remove schedules
 schedule clear highliner:tutorial/main
 schedule clear highliner:game/board/refresh
+schedule clear highliner:game/record/diff/flush
 
 # Settings
 function highliner:settings/maxturn
@@ -152,12 +161,16 @@ function highliner:settings/x22
 function highliner:settings/forced_first_player
 function highliner:settings/tile_theme
 function highliner:settings/instant_placing
+function highliner:settings/replay_jump_speed
 
 # Board
 function highliner:game/board/reset/all
 
 # Bossbar
 function highliner:game/bossbar/clear
+
+# Destroy all records anyway
+function highliner:game/record/destroy
 
 # Create lobby again
 function highliner:lobby/create/idle

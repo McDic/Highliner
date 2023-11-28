@@ -1,6 +1,9 @@
 # Assume this function is executed by slime
 setblock ~ 73 ~ minecraft:air
 
+execute if score !instant_placing constants matches 0 if score !gamemode constants matches 3 run tellraw @a {"text":"WARNING; INSTANT PLACING IS NOT ACIVATED IN REPLAY MODE; SOMETHING MUST BE WRONG.","color":"yellow","bold":true}
+execute if score !instant_placing constants matches 0 if score !gamemode constants matches 3 run scoreboard players set !instant_placing constants 1
+
 execute if score !is_red_turn constants matches 1 if score !tile_theme constants matches 0 if score !instant_placing constants matches 0 run summon minecraft:falling_block ~ 80 ~ {BlockState: {Name: "minecraft:red_wool"}, Time: 0, DropItem: false}
 execute if score !is_red_turn constants matches 1 if score !tile_theme constants matches 1 if score !instant_placing constants matches 0 run summon minecraft:falling_block ~ 80 ~ {BlockState: {Name: "minecraft:red_concrete"}, Time: 0, DropItem: false}
 execute if score !is_red_turn constants matches 1 if score !tile_theme constants matches 2 if score !instant_placing constants matches 0 run summon minecraft:falling_block ~ 80 ~ {BlockState: {Name: "minecraft:red_concrete_powder"}, Time: 0, DropItem: false}

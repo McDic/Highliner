@@ -1,4 +1,5 @@
 # Assuming clone is already done, and checking status of current tile.
+# This function do not look at adjacent tiles.
 # empty 0 (air), my normal 1, my bridge 2, my dominated 3, opponent normal 4, opponent bridge 5, opponent dominated 6, invalid -1
 # empty air, lime mine(normal), green mine(dominated), light gray opponent(normal), gray opponent(dominated)
 
