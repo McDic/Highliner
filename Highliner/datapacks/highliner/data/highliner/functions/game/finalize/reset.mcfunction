@@ -26,7 +26,7 @@ tp @a 0 95 0
 gamemode adventure @a[gamemode=!adventure]
 
 # Items
-execute as @a run function highliner:game/reset_items
+execute as @a run function highliner:game/items/reset
 
 # Bossbar
 function highliner:game/bossbar/clear

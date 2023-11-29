@@ -2,7 +2,7 @@ function highliner:welcome/supercommon
 
 team join spectators @s
 
-function highliner:game/reset_items
+function highliner:game/items/reset
 
 effect clear @s
 

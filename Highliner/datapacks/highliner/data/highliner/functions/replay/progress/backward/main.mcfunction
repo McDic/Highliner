@@ -1,5 +1,7 @@
+execute if score !moving_turn_in_progress constants matches 1 run tellraw @a {"translate":"highliner.error.replay.moving_in_progress", "color":"yellow", "italic":true}
+execute if score !moving_turn_in_progress constants matches 1 run return 0
 scoreboard players set !moving_turn_in_progress constants 1
-function highliner:game/reset_items
+function highliner:game/items/reset
 
 scoreboard players operation !target_turn constants = !turn constants
 scoreboard players operation !target_turn constants -= !replay_jump_speed constants

@@ -33,7 +33,7 @@ tag @s add replayer
 # Scores
 scoreboard players set !gamemode constants 3
 scoreboard players set !turn constants 0
-scoreboard players set !replay_jump_speed constants 1
+scoreboard players set !replay_jump_speed constants 0
 scoreboard players operation !instant_placing_original constants = !instant_placing constants
 scoreboard players set !instant_placing constants 1
 scoreboard objectives remove turn

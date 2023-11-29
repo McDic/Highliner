@@ -20,3 +20,4 @@ execute as @p[scores={lobbytrigger_v2=2}] run function highliner:lobby/change_se
 execute as @p[scores={lobbytrigger_v2=3}] run function highliner:lobby/move_down
 execute as @p[scores={lobbytrigger_v2=4}] run function highliner:lobby/next_menu
 execute if entity @p[scores={lobbytrigger_v2=1..}] run function highliner:lobby/lobbytrigger/forget
+scoreboard players set @a lobbytrigger_v2 0

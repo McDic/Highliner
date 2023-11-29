@@ -1,5 +1,5 @@
 # Get x, z remainder 4
-execute at @s run function highliner:gps
+execute at @s run function highliner:utils/gps
 scoreboard players operation @s gps_x %= !4 constants
 scoreboard players operation @s gps_z %= !4 constants
 

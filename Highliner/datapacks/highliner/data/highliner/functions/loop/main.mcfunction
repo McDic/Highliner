@@ -13,7 +13,7 @@ kill @e[type=minecraft:slime,nbt={Size: 0}]
 execute as @a[scores={changed_floor=1..}] at @s run function highliner:settings/toggle_floor
 
 # Item
-execute as @a[scores={itemdrop=1..}] at @s run function highliner:game/item_dropped
+execute as @a[scores={itemdrop=1..}] at @s run function highliner:game/items/dropped
 kill @e[type=minecraft:item]
 
 # Branching ingame/idle/tutorial/replay

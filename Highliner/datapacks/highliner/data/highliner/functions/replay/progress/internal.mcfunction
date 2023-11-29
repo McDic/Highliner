@@ -18,6 +18,7 @@ function highliner:replay/progress/load with storage highliner:temp_storage temp
 execute if score !turn constants < !target_turn constants run function highliner:replay/progress/forward/single
 execute if score !turn constants > !target_turn constants run function highliner:replay/progress/backward/single
 
-# Schedule 2 ticks after for less lags
+# Schedule for less lags
+function highliner:game/board/bridgefill/main
 schedule clear highliner:replay/progress/internal
-schedule function highliner:replay/progress/internal 2t
+schedule function highliner:replay/progress/internal 1t

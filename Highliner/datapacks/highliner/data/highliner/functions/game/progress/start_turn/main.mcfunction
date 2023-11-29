@@ -16,7 +16,7 @@ function highliner:game/progress/timer/reduce
 # It is important to note that main turn player is NOT determined by `!turn constants`.
 scoreboard players operation @a[team=!spectators] turn *= !-1 constants
 clear @a
-execute as @a[team=!spectators] run function highliner:game/reset_items
+execute as @a[team=!spectators] run function highliner:game/items/reset
 scoreboard players set !in_turn constants 1
 scoreboard players reset @a[team=!spectators] try_surrendered
 scoreboard players reset @a[team=!spectators] surrendered
