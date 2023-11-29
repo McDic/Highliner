@@ -10,5 +10,6 @@ execute store result score !target_replay_match_id_2 constants run data get stor
 execute store result score !target_replay_match_id_3 constants run data get storage highliner:current_match match_id[3]
 tellraw @a {"translate":"highliner.message.announce_match_id","color":"yellow","with":[{"score":{"name":"!target_replay_match_id_0","objective":"constants"}},{"score":{"name":"!target_replay_match_id_1","objective":"constants"}},{"score":{"name":"!target_replay_match_id_2","objective":"constants"}},{"score":{"name":"!target_replay_match_id_3","objective":"constants"}}]}
 
-function highliner:game/record/pop_front
+# Disabled pop_front, because all saves are destroyed on every reload anyway
+# function highliner:game/record/pop_front
 function highliner:game/record/init
