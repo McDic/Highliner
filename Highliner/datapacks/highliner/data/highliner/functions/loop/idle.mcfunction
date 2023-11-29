@@ -1,5 +1,10 @@
 execute as @a[scores={welcome=0..}] at @s run function highliner:welcome/idle
 
+# Refresh all entities if there are too many
+scoreboard players set !display_count constants 0
+execute as @e[type=!minecraft:player,tag=lobby_display] run scoreboard players add !display_count constants 1
+execute if score !display_count constants matches 20.. run function highliner:lobby/create/idle
+
 # Rotate display and interactions if nobody is near
 execute as @e[tag=lobby_display] store result score !lobby_display_rotated constants run function highliner:lobby/refresh_displays/rotate
 execute unless score !lobby_display_rotated constants matches 0 run function highliner:lobby/create/tiny_interactions/move/main
