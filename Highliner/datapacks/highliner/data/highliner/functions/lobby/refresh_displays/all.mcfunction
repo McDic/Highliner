@@ -1,6 +1,6 @@
 # Common
 execute as @e[tag=lobby_display] run function highliner:lobby/refresh_displays/set_display_data
-execute as @e[type=minecraft:text_display,tag=lobby_display,nbt={alignment: "center"}] run data modify entity @s line_width set value 99999
+execute as @e[type=minecraft:text_display,tag=lobby_display] run data modify entity @s line_width set value 99999
 
 # For some reasons, left arrow and right arrow are flipped.
 execute unless score !current_lobby_menu constants matches -1..3 run scoreboard players set !current_lobby_menu constants 0
