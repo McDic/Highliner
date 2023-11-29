@@ -12,6 +12,9 @@ execute if score !forced_first_player constants matches 2 run tellraw @a {"trans
 execute unless score !forced_first_player constants matches 1..2 if score !gamemode constants matches 3 run tellraw @a {"translate":"highliner.gamestatus.settings.forced_first_player.replay_auto","color":"yellow","italic":true}
 execute unless score !forced_first_player constants matches 1..2 unless score !gamemode constants matches 3 run tellraw @a {"translate":"highliner.gamestatus.settings.forced_first_player.random","color":"yellow","italic":true}
 
+execute if score !instant_placing constants matches 0 run tellraw @a {"translate":"highliner.gamestatus.settings.instant_placing.disabled", "color":"yellow", "italic":true}
+execute unless score !instant_placing constants matches 0 run tellraw @a {"translate":"highliner.gamestatus.settings.instant_placing.enabled", "color":"yellow", "italic":true}
+
 execute if score !tile_theme constants matches 0 run tellraw @a {"translate":"highliner.gamestatus.settings.theme","color":"yellow","italic":true,"with":[{"translate":"highliner.lobby.text.settings.theme.wool"}]}
 execute if score !tile_theme constants matches 1 run tellraw @a {"translate":"highliner.gamestatus.settings.theme","color":"yellow","italic":true,"with":[{"translate":"highliner.lobby.text.settings.theme.concrete"}]}
 execute if score !tile_theme constants matches 2 run tellraw @a {"translate":"highliner.gamestatus.settings.theme","color":"yellow","italic":true,"with":[{"translate":"highliner.lobby.text.settings.theme.concrete_powder"}]}

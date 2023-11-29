@@ -7,5 +7,9 @@ scoreboard players add !turn constants 1
 function highliner:replay/progress/load with storage highliner:temp_storage temp_args
 function highliner:game/progress/calculate_score/main
 
+# Refresh tile theme
+scoreboard players remove !tile_theme constants 1
+function highliner:settings/tile_theme
+
 # Now give free again
 scoreboard players set !moving_turn_in_progress constants 0
