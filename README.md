@@ -38,7 +38,7 @@ However, this works on only on idle mode(no game, tutorial, replay is ongoing).
 `highliner:save_matches` will reset on every reload, so if you want to save this, you have to backup this by your own.
 The following is the structure of `highliner:save_matches`.
 
-```json
+```jsonc
 {
     // Each entry of this list represents a match.
     matches: [
