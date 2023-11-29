@@ -18,6 +18,7 @@ execute if score !timer_red constants >= !gamespeed_maxtime constants run tellra
 scoreboard players operation !timer_red constants < !gamespeed_maxtime constants
 execute if score !timer_blue constants >= !gamespeed_maxtime constants run tellraw @a[team=redteam] {"translate":"highliner.message.replay.timer_truncated","italic":true,"color":"yellow"}
 scoreboard players operation !timer_blue constants < !gamespeed_maxtime constants
+scoreboard players operation !instant_placing constants = !instant_placing_original constants
 
 # Just update a match id, remove all further diffs and go
 function highliner:game/record/assign_match_id
