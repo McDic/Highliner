@@ -148,3 +148,4 @@ The following is the structure of `highliner:save_matches`.
     - You can replay a match.
 - Completely reworked on lobby; Now the lobby uses display and interaction entities.
 - Reworked on admin functions like lobby locking. (This should not affect Realms)
+- Added instant placing mode.

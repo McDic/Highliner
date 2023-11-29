@@ -19,7 +19,10 @@ scoreboard players operation !timer_red constants < !gamespeed_maxtime constants
 execute if score !timer_blue constants >= !gamespeed_maxtime constants run tellraw @a[team=redteam] {"translate":"highliner.message.replay.timer_truncated","italic":true,"color":"yellow"}
 scoreboard players operation !timer_blue constants < !gamespeed_maxtime constants
 
-# Just update a match id and go
+# Just update a match id, remove all further diffs and go
 function highliner:game/record/assign_match_id
+data modify storage highliner:temp_storage temp_args set value {}
+execute store result storage highliner:temp_storage temp_args.index int 1 run scoreboard players get !turn constants
+function highliner:game/record/remove_futures with storage highliner:temp_storage temp_args
 scoreboard players set !skip_save_diff constants 1
 function highliner:game/progress/next_turn
