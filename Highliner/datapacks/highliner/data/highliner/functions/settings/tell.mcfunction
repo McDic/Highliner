@@ -1,3 +1,5 @@
+# This function is called before changing gamemode score.
+
 tellraw @a {"translate":"highliner.gamestatus.settings.head","color":"yellow","bold":true}
 tellraw @a {"translate":"highliner.gamestatus.settings.maxturn","color":"yellow","italic":true,"with":[{"score":{"objective":"constants","name":"!max_turn"}}]}
 tellraw @a {"translate":"highliner.gamestatus.settings.gamespeed","color":"yellow","italic":true,"with":[{"score":{"objective":"constants","name":"!gamespeed_addtime"}},{"score":{"objective":"constants","name":"!gamespeed_maxtime"}}]}
@@ -7,7 +9,8 @@ execute if score !disable_x22 constants matches 1 run tellraw @a {"translate":"h
 
 execute if score !forced_first_player constants matches 1 run tellraw @a {"translate":"highliner.gamestatus.settings.forced_first_player.nonrandom","color":"yellow","italic":true,"with":[{"translate":"highliner.redteam"}]}
 execute if score !forced_first_player constants matches 2 run tellraw @a {"translate":"highliner.gamestatus.settings.forced_first_player.nonrandom","color":"yellow","italic":true,"with":[{"translate":"highliner.blueteam"}]}
-execute unless score !forced_first_player constants matches 1..2 run tellraw @a {"translate":"highliner.gamestatus.settings.forced_first_player.random","color":"yellow","italic":true}
+execute unless score !forced_first_player constants matches 1..2 if score !gamemode constants matches 3 run tellraw @a {"translate":"highliner.gamestatus.settings.forced_first_player.replay_auto","color":"yellow","italic":true}
+execute unless score !forced_first_player constants matches 1..2 unless score !gamemode constants matches 3 run tellraw @a {"translate":"highliner.gamestatus.settings.forced_first_player.random","color":"yellow","italic":true}
 
 execute if score !tile_theme constants matches 0 run tellraw @a {"translate":"highliner.gamestatus.settings.theme","color":"yellow","italic":true,"with":[{"translate":"highliner.lobby.text.settings.theme.wool"}]}
 execute if score !tile_theme constants matches 1 run tellraw @a {"translate":"highliner.gamestatus.settings.theme","color":"yellow","italic":true,"with":[{"translate":"highliner.lobby.text.settings.theme.concrete"}]}

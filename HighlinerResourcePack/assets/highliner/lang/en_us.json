@@ -70,14 +70,15 @@
     "highliner.gamestatus.settings.x22.disabled": "- 2x2 placement will be disallowed.",
     "highliner.gamestatus.settings.forced_first_player.nonrandom": "- %s will be the first player.",
     "highliner.gamestatus.settings.forced_first_player.random": "- First turn player will be randomly decided.",
+    "highliner.gamestatus.settings.forced_first_player.replay_auto": "- First turn player will be decided based on the latest move of the replay.",
     "highliner.gamestatus.settings.theme": "- Tile theme: %s",
     "highliner.item.name.rotate": "Rotate (%s)",
     "highliner.item.name.place": "Place (%s)",
     "highliner.item.name.surrender": "Surrender (%s)",
     "highliner.item.name.map": "Map",
     "highliner.item.name.change_height": "Change Height (%s)",
-    "highliner.item.name.replay.prev_turn": "Move %s Turn Back (%s)",
-    "highliner.item.name.replay.next_turn": "Move %s Turn Forward (%s)",
+    "highliner.item.name.replay.prev_turn": "Move %s Turns Backward (%s)",
+    "highliner.item.name.replay.next_turn": "Move %s Turns Forward (%s)",
     "highliner.lobby.text.main.title": "Highliner Remastered",
     "highliner.lobby.text.main.joinleave": "Join or Leave %s",
     "highliner.lobby.text.main.start_game": "Start Game",
@@ -124,5 +125,9 @@
     "highliner.lobby.message.disallowed.replay": "The only who started the replay mode can interact with the lobby!",
     "highliner.error.replay.empty_match": "You tried to load an empty match. Exiting replay mode..",
     "highliner.error.replay.moving_in_progress": "The turn is moving in progress, please try again after it ends!",
-    "highliner.message.replay.announce_movement": "Moving from turn %s to turn %s.."
+    "highliner.message.replay.announce_movement": "Moving from turn %s to turn %s..",
+    "highliner.message.replay.only_one_save": "There is only one save, so you cannot change the target replay.",
+    "highliner.error.replay.max_turn_exceeded": "You can't start a new match from here, because the current max turn setting is %s turns.",
+    "highliner.error.replay.half_dominated": "You can't start a new match from here, because more than half of the all tiles are dominated by one team.",
+    "highliner.message.replay.timer_truncated": "Your timer will be reduced to respect your current settings."
 }

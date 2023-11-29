@@ -26,4 +26,4 @@ execute if score !current_lobby_menu constants matches 3 if score !gamemode cons
 execute if score !current_lobby_menu constants matches 3 if score !gamemode constants matches 0 if score !current_lobby_selection constants matches 1 run function highliner:replay/choose_target
 execute if score !current_lobby_menu constants matches 3 if score !gamemode constants matches 3 if score !current_lobby_selection constants matches 3 run function highliner:replay/exit
 execute if score !current_lobby_menu constants matches 3 if score !gamemode constants matches 3 if score !current_lobby_selection constants matches 2 run function highliner:settings/replay_jump_speed
-execute if score !current_lobby_menu constants matches 3 if score !gamemode constants matches 3 if score !current_lobby_selection constants matches 1 run tellraw @a {"text":"NOT IMPLEMENTED YET","color":"yellow","bold":true}
+execute if score !current_lobby_menu constants matches 3 if score !gamemode constants matches 3 if score !current_lobby_selection constants matches 1 run function highliner:game/start/from_replay
