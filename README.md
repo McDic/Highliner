@@ -11,7 +11,7 @@ This repository contains data pack and resource pack for the Minecraft Map *"Hig
 - HighlinerResourcePack (Resourcepack folder)
 ```
 
-## Administraction Guideline
+## Administration Guideline
 
 Every behaviour should be executed by an atomic operation to ensure map safety.
 Please do not directly modify any settings without calling a function, which will most likely make a bug.
