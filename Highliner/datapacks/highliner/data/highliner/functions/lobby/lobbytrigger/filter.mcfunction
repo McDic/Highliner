@@ -1,4 +1,5 @@
 execute if entity @p[tag=lobby_lock] if entity @p[tag=!lobby_lock,scores={lobbytrigger_v2=1..}] run tellraw @a[tag=!lobby_lock,scores={lobbytrigger_v2=1..}] {"translate":"highliner.lobby.message.locked","color":"yellow","italic":true}
+execute if entity @p[tag=lobby_lock] if entity @p[tag=!lobby_lock,scores={lobbytrigger_v2=1..}] run function highliner:lobby/lobbytrigger/forget
 execute if entity @p[tag=lobby_lock] run scoreboard players set @a[tag=!lobby_lock] lobbytrigger_v2 0
 
 scoreboard players set !concurrent_triggers constants 0

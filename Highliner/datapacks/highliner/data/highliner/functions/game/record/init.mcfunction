@@ -10,8 +10,4 @@ data merge storage highliner:current_match {diffs: [], settings: {}, match_id: [
 execute store result storage highliner:current_match settings.disable_x22 int 1 run scoreboard players get !disable_x22 constants
 # - Forced first player, Instant placing and tile theme will not be copied, because they are useless.
 
-# Assign new match ID (4 random 6-digit ints)
-execute store result storage highliner:current_match match_id[0] int 1 run random value 0..999999
-execute store result storage highliner:current_match match_id[1] int 1 run random value 0..999999
-execute store result storage highliner:current_match match_id[2] int 1 run random value 0..999999
-execute store result storage highliner:current_match match_id[3] int 1 run random value 0..999999
+function highliner:game/record/assign_match_id
