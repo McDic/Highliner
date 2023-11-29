@@ -34,9 +34,9 @@ However, this works on only on idle mode(no game, tutorial, replay is ongoing).
 
 ### (For devs) Data storage regarding replay saves
 
-`highliner:save_matches` will save all matches. `highliner:current_match` contains all information of the current match.
-`highliner:save_matches` will reset on every reload, so if you want to save this, you have to backup this by your own.
-The following is the structure of `highliner:save_matches`.
+`highliner:saved_matches` will save all matches. `highliner:current_match` contains all information of the current match.
+`highliner:saved_matches` will reset on every reload, so if you want to save this, you have to backup this by your own.
+The following is the structure of `highliner:saved_matches`.
 
 ```jsonc
 {
