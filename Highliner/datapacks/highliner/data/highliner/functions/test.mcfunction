@@ -1,1 +1,0 @@
-summon minecraft:text_display ~ ~ ~ {text: '{"text":"Highliner - Made by McDic"}', text_opacity: 255, background: 0, alignment: "center", line_width: 210, default_background: false, transformation: [1f, 0f, 0f, 0f, 0f, 1f, 0f, 0f, 0f, 0f, 1f, 0f, 0f, 0f, 0f, 1f]}
