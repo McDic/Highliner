@@ -72,6 +72,8 @@
     "highliner.gamestatus.settings.forced_first_player.random": "- First turn player will be randomly decided.",
     "highliner.gamestatus.settings.forced_first_player.replay_auto": "- First turn player will be decided based on the latest move of the replay.",
     "highliner.gamestatus.settings.theme": "- Tile theme: %s",
+    "highliner.gamestatus.settings.instant_placing.enabled": "- Instant placing is enabled.",
+    "highliner.gamestatus.settings.instant_placing.disabled": "- Instant placing is disabled.",
     "highliner.item.name.rotate": "Rotate (%s)",
     "highliner.item.name.place": "Place (%s)",
     "highliner.item.name.surrender": "Surrender (%s)",

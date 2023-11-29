@@ -72,6 +72,8 @@
     "highliner.gamestatus.settings.forced_first_player.random": "- 첫 턴 플레이어는 랜덤으로 결정됩니다.",
     "highliner.gamestatus.settings.forced_first_player.replay_auto": "- 첫 턴 플레이어는 리플레이의 시작 시점을 기준으로 결정됩니다.",
     "highliner.gamestatus.settings.theme": "- 타일 테마: %s",
+    "highliner.gamestatus.settings.instant_placing.enabled": "- 즉시 설치가 활성화됩니다.",
+    "highliner.gamestatus.settings.instant_placing.disabled": "- 즉시 설치가 비활성화됩니다.",
     "highliner.item.name.rotate": "타일 회전하기 (%s)",
     "highliner.item.name.place": "타일 설치하기 (%s)",
     "highliner.item.name.surrender": "기권하기 (%s)",
