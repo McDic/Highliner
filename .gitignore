@@ -3,6 +3,7 @@ Highliner/*
 !Highliner/datapacks
 # Highliner/datapacks/**/.git/**/*
 !HighlinerResourcePack*/*
+!Highliner/icon.png
 
 # Server files
 libraries/
