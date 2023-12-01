@@ -16,7 +16,7 @@ execute as @e[type=minecraft:interaction,tag=lobby_interaction_down] on target r
 function highliner:lobby/lobbytrigger/filter
 execute as @p[tag=replayer,scores={lobbytrigger_v2=2}] run function highliner:lobby/change_selected
 execute as @p[tag=replayer,scores={lobbytrigger_v2=3}] run function highliner:lobby/move_down
-execute if entity @p[scores={lobbytrigger_v2=1..}] run function highliner:lobby/lobbytrigger/forget
+function highliner:lobby/lobbytrigger/forget
 scoreboard players set @a lobbytrigger_v2 0
 
 # Progress display

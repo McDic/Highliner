@@ -27,7 +27,7 @@
     "highliner.message.surrender.no": "아니오",
     "highliner.lobby.message.join": "%s님이 %s에 들어가셨습니다!",
     "highliner.lobby.message.leave": "%s님이 %s에서 나가셨습니다.",
-    "highliner.lobby.message.duplicated": "여러 명의 플레이어가 동시에 표지판을 클릭했습니다. 다시 시도해주세요..",
+    "highliner.lobby.message.duplicated": "여러 명의 플레이어가 동시에 로비와 상호작용을 시도했습니다. 다시 시도해주세요..",
     "highliner.lobby.message.locked": "로비가 잠긴 상태입니다. 로비를 잠금해제하려면 /function highliner:settings/toggle_lock 를 하시거나, 서버 관리자에게 문의해주세요.",
     "highliner.redteam": "빨강 팀",
     "highliner.blueteam": "파랑 팀",

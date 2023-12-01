@@ -27,7 +27,7 @@
     "highliner.message.surrender.no": "NO",
     "highliner.lobby.message.join": "%s joined the %s!",
     "highliner.lobby.message.leave": "%s left the %s.",
-    "highliner.lobby.message.duplicated": "More than one player tried to tirgger the sign at the same tick! Please try again!",
+    "highliner.lobby.message.duplicated": "More than one player tried to interact with the lobby at the same tick! Please try again!",
     "highliner.lobby.message.locked": "Lobby is locked. You can unlock by /function highliner:settings/toggle_lock. If you can't unlock, please contact your administrator.",
     "highliner.redteam": "Red Team",
     "highliner.blueteam": "Blue Team",
