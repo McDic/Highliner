@@ -52,11 +52,12 @@ The following is the structure of `highliner:saved_matches`.
                     placing_direction: int, // (1 = X or -1 = Z)
                     x: double, // Placed X coordination
                     z: double, // Placed Z coordination
-                    prev_states: [ // List of all tile changes.
+                    state_changes: [ // List of all tile changes.
                         {
                             x: double, // Tile's X
                             z: double, // Tile's Z
-                            state: int // (0~6, current tile state)
+                            before_state: int, // (0~6, current tile state)
+                            after_state: int // (0~6, after tile state)
                         },
                         // ...
                     ]

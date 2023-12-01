@@ -127,13 +127,11 @@ scoreboard players set !replay_jump_speed constants 0
 team remove spectators
 team remove redteam
 team remove blueteam
-team remove placeable
-team remove unplacable
+team remove placing_preview
 team add spectators ["",{"text":"Spectator","color":"yellow"}]
 team add redteam ["",{"text":"Red Team","color":"dark_red"}]
 team add blueteam ["",{"text":"Blue Team","color":"aqua"}]
-team add placeable
-team add unplaceable
+team add placing_preview
 team modify spectators collisionRule never
 team modify spectators color yellow
 team modify spectators seeFriendlyInvisibles true
@@ -141,10 +139,8 @@ team modify redteam collisionRule never
 team modify redteam color dark_red
 team modify blueteam collisionRule never
 team modify blueteam color aqua
-team modify placeable collisionRule never
-team modify placeable color white
-team modify unplaceable collisionRule never
-team modify unplaceable color black
+team modify placing_preview collisionRule never
+team modify placing_preview color yellow
 
 # Advancements
 advancement revoke @a everything
@@ -169,8 +165,8 @@ function highliner:game/board/reset/all
 # Bossbar
 function highliner:game/bossbar/clear
 
-# Destroy all records
-function highliner:game/record/destroy
+# Destroy all records (disabled)
+# function highliner:game/record/destroy
 
 # Create lobby again
 function highliner:lobby/create/idle

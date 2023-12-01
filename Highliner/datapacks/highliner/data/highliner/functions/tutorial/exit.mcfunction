@@ -2,6 +2,10 @@ tellraw @a {"translate":"highliner.tutorial.exit", "color":"yellow", "italic":tr
 kill @e[type=minecraft:marker,name="tutorial_placer"]
 function highliner:game/placing/exit
 schedule clear highliner:tutorial/main
-execute if score !disable_x22_original constants matches 0..1 run scoreboard players operation !disable_x22 constants = !disable_x22_original constants
+
+# Restore settings
+scoreboard players operation !disable_x22 constants = !disable_x22_original constants
+scoreboard players operation !instant_placing constants = !instant_placing_original constants
+
+# Common reset
 function highliner:game/finalize/reset
-scoreboard players set !gamemode constants 0

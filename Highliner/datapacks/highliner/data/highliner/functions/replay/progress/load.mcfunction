@@ -11,6 +11,3 @@ data modify storage highliner:temp_storage temp_pos set value [0.0, 73.0, 0.0]
 data modify storage highliner:temp_storage temp_pos[0] set from storage highliner:temp_storage temp_diff.x
 data modify storage highliner:temp_storage temp_pos[2] set from storage highliner:temp_storage temp_diff.z
 data modify entity @e[type=minecraft:marker,name="placing_preview",scores={placing=0},limit=1] Pos set from storage highliner:temp_storage temp_pos
-
-# This should be done to do proper placing
-execute as @e[type=minecraft:marker,name="placing_preview",scores={placing=0},limit=1] at @s run function highliner:game/placing/preview

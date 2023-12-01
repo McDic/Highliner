@@ -33,6 +33,7 @@
     "highliner.blueteam": "파랑 팀",
     "highliner.message.lobby_locked": "로비가 잠금되었습니다.",
     "highliner.message.lobby_unlocked": "로비가 잠금해제되었습니다.",
+    "highliner.message.lobby_lock_unchanged": "%s님이 본인의 로비 잠금을 해제하셨지만, 다른 로비 잠금 유저가 아직 있으므로 로비 잠금 여부는 바뀌지 않습니다.",
     "highliner.tutorial.exit": "좋아요, 즐겁게 게임하세요!",
     "highliner.tutorial.entry.title": "하이라이너 튜토리얼",
     "highliner.tutorial.entry.subtitle": "McDic 제작",

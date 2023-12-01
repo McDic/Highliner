@@ -33,6 +33,7 @@
     "highliner.blueteam": "Blue Team",
     "highliner.message.lobby_locked": "Lobby is now locked.",
     "highliner.message.lobby_unlocked": "Lobby is now unlocked.",
+    "highliner.message.lobby_lock_unchanged": "%s toggled his/her lock but there are still other lock users, so the lobby lock remains unchanged.",
     "highliner.tutorial.exit": "Alright, have fun!",
     "highliner.tutorial.entry.title": "Highliner Tutorial",
     "highliner.tutorial.entry.subtitle": "Made by McDic",

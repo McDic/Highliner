@@ -29,11 +29,15 @@ execute as @e[type=minecraft:slime,name="placing_preview",scores={placing_dz=3}]
 # Check placeable
 function highliner:game/get_turn
 execute at @s store result score !is_not_placeable constants run function highliner:game/board/check/is_not_placeable
-execute unless score !is_not_placeable constants matches 0 run function highliner:game/placing/display_placeable/impossible
-execute if score !is_not_placeable constants matches 1 as @e[type=minecraft:slime,name="placing_preview"] run data modify entity @s Glowing set value false
-execute unless score !is_not_placeable constants matches 1 as @e[type=minecraft:slime,name="placing_preview"] run data modify entity @s Glowing set value true
-execute if score !is_not_placeable constants matches 0 if score !is_red_turn constants matches 1 run function highliner:game/placing/display_placeable/red
-execute if score !is_not_placeable constants matches 0 unless score !is_red_turn constants matches 1 run function highliner:game/placing/display_placeable/blue
+
+# Settings for glowing
+team modify placing_preview color yellow
+execute if score !is_not_placeable constants matches 1 as @e[type=minecraft:slime,team=placing_preview,name="placing_preview"] run data modify entity @s Glowing set value false
+execute unless score !is_not_placeable constants matches 1 as @e[type=minecraft:slime,team=placing_preview,name="placing_preview"] run data modify entity @s Glowing set value true
+execute if score !is_not_placeable constants matches 0 if score !is_red_turn constants matches 1 run team modify placing_preview color dark_red
+execute if score !is_not_placeable constants matches 0 unless score !is_red_turn constants matches 1 run team modify placing_preview color blue
+execute if score !gamemode constants matches 3 unless score !is_not_placeable constants matches 1 if score !is_red_turn constants matches 1 run team modify placing_preview color dark_red
+execute if score !gamemode constants matches 3 unless score !is_not_placeable constants matches 1 unless score !is_red_turn constants matches 1 run team modify placing_preview color blue
 
 # Bridging shapes
 execute if score !is_not_placeable constants matches 0 if score !tried_bridging constants matches 1 if score !placing_direction constants matches 01 as @e[type=minecraft:slime,name="placing_preview",scores={placing=0,placing_dx=1..2,placing_dz=0}] at @s run tp @s ~ ~ ~01

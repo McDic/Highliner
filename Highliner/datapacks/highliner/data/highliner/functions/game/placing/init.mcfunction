@@ -16,7 +16,7 @@ execute as @e[type=minecraft:slime,name="placing_preview"] at @s run function hi
 execute as @e[type=minecraft:slime,name="placing_preview"] at @s run function highliner:game/placing/summon_preview
 execute as @e[type=minecraft:slime,name="placing_preview"] at @s run function highliner:game/placing/summon_preview
 execute as @e[type=minecraft:slime,name="placing_preview",tag=!invisible] run function highliner:game/give_invisibility
-team join placeable @e[type=minecraft:slime,name="placing_preview"]
+team join placing_preview @e[type=minecraft:slime,name="placing_preview"]
 scoreboard players set @e[type=minecraft:slime,name="placing_preview"] temp_variables 0
 
 # Placing dx, dz

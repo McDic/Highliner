@@ -54,4 +54,4 @@ execute positioned 0 72 0 run function highliner:game/placing/init
 
 # Board
 function highliner:game/board/reset/all
-function highliner:replay/progress/forward/main
+function highliner:replay/progress/forward
