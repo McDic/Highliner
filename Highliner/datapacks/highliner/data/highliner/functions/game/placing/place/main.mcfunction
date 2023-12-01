@@ -1,3 +1,7 @@
+execute if score !gamemode constants matches 1 if score !raycast_inboard constants matches 0 run playsound minecraft:entity.villager.no master @s
+execute if score !gamemode constants matches 1 if score !raycast_inboard constants matches 0 run tellraw @s {"translate":"highliner.error.cantplace.outboard", "color":"yellow", "italic":true}
+execute if score !gamemode constants matches 1 if score !raycast_inboard constants matches 0 run return 0
+
 function highliner:game/get_turn
 execute store result score !is_not_placeable constants as @e[type=minecraft:marker,name="placing_preview",scores={placing=0}] at @s run function highliner:game/board/check/is_not_placeable
 
@@ -18,3 +22,4 @@ execute if score !tried_bridging constants matches 0 as @e[type=minecraft:slime,
 execute if score !tried_bridging constants matches 0 as @a at @s run playsound minecraft:block.wool.place master @s ~ ~ ~ 10
 execute if score !tried_bridging constants matches 1 as @e[type=minecraft:marker,name="placing_preview",scores={placing=0}] at @s run function highliner:game/placing/place/bridge
 execute if score !tried_bridging constants matches 1 as @a at @s run playsound minecraft:block.anvil.land master @s ~ ~ ~ 10
+return 1
