@@ -99,6 +99,7 @@ scoreboard players set !-1 constants -1
 scoreboard players set !2 constants 2
 scoreboard players set !3 constants 3
 scoreboard players set !4 constants 4
+scoreboard players set !9 constants 9
 scoreboard players set !max_turn_cap constants 240
 scoreboard players set !halftiles constants 421
 scoreboard players set !gamemode constants 0

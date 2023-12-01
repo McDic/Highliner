@@ -2,9 +2,8 @@ execute as @a[scores={welcome=0..}] at @s run function highliner:welcome/replay
 
 execute unless entity @p[tag=replayer] run function highliner:replay/exit
 
-# Rotate display and interactions if nobody is near
-execute as @e[tag=lobby_display] store result score !lobby_display_rotated constants run function highliner:lobby/refresh_displays/rotate
-execute unless score !lobby_display_rotated constants matches 0 run function highliner:lobby/create/tiny_interactions/move/main
+# Move displays
+function highliner:lobby/refresh_displays/move/main
 
 # Lobby trigger v2; Unlike idle, do not horizontally change menu.
 scoreboard players set @a lobbytrigger_v2 0
