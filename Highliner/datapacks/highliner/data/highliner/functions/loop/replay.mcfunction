@@ -26,3 +26,5 @@ function highliner:game/bossbar/update
 # Move forward or backward
 execute as @p[tag=replayer,scores={used_item_backward=1..}] run function highliner:replay/progress/backward
 execute as @p[tag=replayer,scores={used_item_forward=1..}] run function highliner:replay/progress/forward
+execute as @a[scores={used_item_backward=1..}] run function highliner:game/items/reset
+execute as @a[scores={used_item_forward=1..}] run function highliner:game/items/reset

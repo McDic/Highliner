@@ -11,6 +11,7 @@ kill @e[type=!minecraft:player]
 # Gamerules
 gamerule announceAdvancements false
 gamerule commandBlockOutput false
+gamerule commandModificationBlockLimit 1048576
 gamerule disableElytraMovementCheck true
 gamerule disableRaids true
 gamerule doDaylightCycle true

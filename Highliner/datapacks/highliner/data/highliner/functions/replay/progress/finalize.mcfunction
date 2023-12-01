@@ -7,6 +7,8 @@ scoreboard players add !turn constants 1
 function highliner:replay/progress/load with storage highliner:temp_storage temp_args
 
 # Refresh several board stuffs
+function highliner:game/board/clone/all
+function highliner:game/board/bridgefill/main
 scoreboard players remove !tile_theme constants 1
 function highliner:settings/tile_theme
 function highliner:game/progress/calculate_score/main
