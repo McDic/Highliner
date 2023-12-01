@@ -7,7 +7,7 @@ execute store result score !prev_tile_state constants run function highliner:gam
 # execute if score !moved constants matches 1 run tellraw @a [{"text":"DEBUG: prev = "},{"score":{"objective":"constants","name":"!prev_tile_state"}},{"text":" -> current = "},{"score":{"objective":"constants","name":"!current_tile_state"}}]
 execute if score !prev_tile_state constants = !current_tile_state constants run return 0
 
-data modify storage highliner:temp_storage temp_state_change set value {x: 0, z: 0, state: 0, after_state: 0}
+data modify storage highliner:temp_storage temp_state_change set value {x: 0, z: 0, before_state: 0, after_state: 0}
 execute store result storage highliner:temp_storage temp_state_change.before_state int 1 run scoreboard players get !prev_tile_state constants
 execute store result storage highliner:temp_storage temp_state_change.after_state int 1 run scoreboard players get !current_tile_state constants
 execute positioned ~ 68 ~ summon minecraft:marker align xz run function highliner:game/record/diff/temp_xz_assign
