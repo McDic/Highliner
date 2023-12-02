@@ -10,9 +10,10 @@ function highliner:utils/slow_math/sqrt
 scoreboard players operation !temp_factor constants = !slow_sqrt constants
 scoreboard players remove !temp_factor constants 5
 scoreboard players operation !temp_factor constants > !0 constants
+execute unless score !gamemode constants matches 0 run scoreboard players set !temp_factor constants 0
 
 # Lobby rotate target speed: x -> x/1000 angle per tick. x = pow(2, temp_factor / 9) * 1500 if temp_factor > 0 else 0.
-# Lobby rotate target distance: x -> x/1000 blocks per tick. x = temp_factor * 750
+# Lobby rotate target distance: x -> x/1000 blocks. x = temp_factor * 750
 scoreboard players set !temp_speed_multiplier constants 1500
 scoreboard players set !temp_distance_multiplier constants 750
 scoreboard players set !temp_pow constants 1
@@ -47,5 +48,8 @@ execute if score !lobby_rotate_distance constants < !lobby_rotate_target_distanc
 # If speed = 0, then just get out.
 execute unless score !lobby_rotate_speed constants matches 1.. run return 0
 execute as @e[tag=lobby_display] at @s run function highliner:lobby/refresh_displays/move/rotate
+execute if score !lobby_rotate_distance constants matches 5000..11999 as @e[tag=lobby_display_root] at @s run particle minecraft:cloud ~ ~ ~ 0.5 0.5 0.5 0.2 25 force @a[tag=!replayer]
+execute if score !lobby_rotate_distance constants matches 12000..24999 as @e[tag=lobby_display_root] at @s run particle minecraft:cloud ~ ~ ~ 1 1 1 0.4 100 force @a[tag=!replayer]
+execute if score !lobby_rotate_distance constants matches 25000.. as @e[tag=lobby_display_root] at @s run particle minecraft:cloud ~ ~ ~ 2 2 2 1.6 1000 force @a[tag=!replayer]
 function highliner:lobby/create/tiny_interactions/move/main
 return 1

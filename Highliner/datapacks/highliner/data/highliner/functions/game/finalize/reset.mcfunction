@@ -1,6 +1,6 @@
 # Worldborder (132 max)
 worldborder center 0.0 0.0
-worldborder set 20 1
+worldborder set 36 1
 worldborder warning distance 0
 
 # Scoreboard
