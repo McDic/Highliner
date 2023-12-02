@@ -26,5 +26,4 @@ execute if score !turn constants < !target_turn constants run scoreboard players
 execute if score !turn constants > !target_turn constants run scoreboard players remove !turn constants 1
 
 # Schedule for less lags
-schedule clear highliner:replay/progress/internal
-schedule function highliner:replay/progress/internal 1t
+function highliner:replay/progress/internal
