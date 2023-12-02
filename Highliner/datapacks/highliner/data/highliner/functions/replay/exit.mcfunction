@@ -1,9 +1,6 @@
 # Exit placing
 function highliner:game/placing/exit
 
-# Tag
-tag @a remove replayer
-
 # Scoreboard
 scoreboard objectives remove turn
 scoreboard objectives add turn dummy

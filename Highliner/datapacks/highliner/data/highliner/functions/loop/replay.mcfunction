@@ -1,21 +1,18 @@
 execute as @a[scores={welcome=0..}] at @s run function highliner:welcome/replay
-
-execute unless entity @p[tag=replayer] run function highliner:replay/exit
+execute unless entity @p run function highliner:replay/exit
 
 # Move displays
 function highliner:lobby/refresh_displays/move/main
 
 # Lobby trigger v2; Unlike idle, do not horizontally change menu.
 scoreboard players set @a lobbytrigger_v2 0
-execute as @e[type=minecraft:interaction,tag=lobby_interaction] on attacker run scoreboard players set @s[tag=!replayer] lobbytrigger_v2 -1
-execute as @e[type=minecraft:interaction,tag=lobby_interaction] on target run scoreboard players set @s[tag=!replayer] lobbytrigger_v2 -1
-execute as @e[type=minecraft:interaction,tag=lobby_interaction_change] on attacker run scoreboard players set @s[tag=replayer] lobbytrigger_v2 2
-execute as @e[type=minecraft:interaction,tag=lobby_interaction_change] on target run scoreboard players set @s[tag=replayer] lobbytrigger_v2 2
-execute as @e[type=minecraft:interaction,tag=lobby_interaction_down] on attacker run scoreboard players set @s[tag=replayer] lobbytrigger_v2 3
-execute as @e[type=minecraft:interaction,tag=lobby_interaction_down] on target run scoreboard players set @s[tag=replayer] lobbytrigger_v2 3
+execute as @e[type=minecraft:interaction,tag=lobby_interaction_change] on attacker run scoreboard players set @s lobbytrigger_v2 2
+execute as @e[type=minecraft:interaction,tag=lobby_interaction_change] on target run scoreboard players set @s lobbytrigger_v2 2
+execute as @e[type=minecraft:interaction,tag=lobby_interaction_down] on attacker run scoreboard players set @s lobbytrigger_v2 3
+execute as @e[type=minecraft:interaction,tag=lobby_interaction_down] on target run scoreboard players set @s lobbytrigger_v2 3
 function highliner:lobby/lobbytrigger/filter
-execute as @p[tag=replayer,scores={lobbytrigger_v2=2}] run function highliner:lobby/change_selected
-execute as @p[tag=replayer,scores={lobbytrigger_v2=3}] run function highliner:lobby/move_down
+execute as @p[scores={lobbytrigger_v2=2}] run function highliner:lobby/change_selected
+execute as @p[scores={lobbytrigger_v2=3}] run function highliner:lobby/move_down
 function highliner:lobby/lobbytrigger/forget
 scoreboard players set @a lobbytrigger_v2 0
 
@@ -24,7 +21,9 @@ title @a actionbar {"translate":"highliner.gamestatus.current","color":"yellow",
 function highliner:game/bossbar/update
 
 # Move forward or backward
-execute as @p[tag=replayer,scores={used_item_backward=1..}] run function highliner:replay/progress/backward
-execute as @p[tag=replayer,scores={used_item_forward=1..}] run function highliner:replay/progress/forward
+execute as @p[,scores={used_item_backward=1..}] run function highliner:replay/progress/backward
+execute as @p[,scores={used_item_forward=1..}] run function highliner:replay/progress/forward
+execute as @p[,scores={rotated=1..}] run function highliner:settings/replay_jump_speed
 execute as @a[scores={used_item_backward=1..}] run function highliner:game/items/reset
 execute as @a[scores={used_item_forward=1..}] run function highliner:game/items/reset
+execute as @a[scores={rotated=1..}] run function highliner:game/items/reset

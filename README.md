@@ -9,6 +9,8 @@ This repository contains data pack and resource pack for the Minecraft Map *"Hig
     - datapacks
         - highliner (Data pack folder)
 - HighlinerResourcePack (Resourcepack folder)
+- bdstudio (BDstudio project files)
+- pythonscripts (Some python files that automatically generates `.mcfunction` files)
 ```
 
 ## Administration Guideline
@@ -28,7 +30,7 @@ However, if you leave the game and rejoin, your lobby lock will be released.
 ### How to make specific players to join teams
 
 You can assign whoever you want to both red and blue teams.
-However, this works on only on idle mode(no game, tutorial, replay is ongoing).
+However, this works on only either idle mode or replay mode.
 
 - `/function highliner:admin/assign_redblue {red: "PLAYER_NAME1", blue: "PLAYER_NAME2"}`
 

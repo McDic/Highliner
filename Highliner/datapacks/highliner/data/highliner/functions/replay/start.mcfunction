@@ -26,10 +26,6 @@ scoreboard objectives add lobbytrigger_v2 dummy
 # Lobby
 function highliner:lobby/lobbytrigger/forget
 
-# Tag
-tag @a remove replayer
-tag @s add replayer
-
 # Scores
 scoreboard players set !gamemode constants 3
 scoreboard players set !turn constants 0

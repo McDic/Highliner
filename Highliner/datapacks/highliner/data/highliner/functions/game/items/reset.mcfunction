@@ -4,8 +4,8 @@ execute if score !gamemode constants matches 1 run item replace entity @s[team=!
 execute if score !gamemode constants matches 1 run item replace entity @s[team=!spectators,scores={turn=1}] hotbar.1 with minecraft:golden_boots{display: {Name: '{"translate":"highliner.item.name.place","with":[{"keybind":"key.use"}]}'}}
 execute if score !gamemode constants matches 1 run item replace entity @s[team=!spectators] hotbar.8 with minecraft:diamond_boots{display: {Name: '{"translate":"highliner.item.name.surrender","with":[{"keybind":"key.use"}]}'}}
 
-execute if score !gamemode constants matches 3 as @s[tag=replayer] run function highliner:game/items/textize {item_name: "minecraft:iron_chestplate", slot: "hotbar.0", textnbt: '{"translate":"highliner.item.name.replay.prev_turn","with":[{"score":{"objective":"constants","name":"!replay_jump_speed"}},{"keybind":"key.use"}]}'}
-execute if score !gamemode constants matches 3 as @s[tag=replayer] run function highliner:game/items/textize {item_name: "minecraft:golden_chestplate", slot: "hotbar.1", textnbt: '{"translate":"highliner.item.name.replay.next_turn","with":[{"score":{"objective":"constants","name":"!replay_jump_speed"}},{"keybind":"key.use"}]}'}
+execute if score !gamemode constants matches 3 if entity @p[tag=lobby_lock] as @s[tag=lobby_lock] run function highliner:game/items/reset_replay
+execute if score !gamemode constants matches 3 unless entity @p[tag=lobby_lock] run function highliner:game/items/reset_replay
 
 item replace entity @s weapon.offhand with minecraft:filled_map{map: 1, display: {Name: '{"translate":"highliner.item.name.map"}'}}
 item replace entity @s hotbar.7 with minecraft:netherite_boots{display: {Name: '{"translate":"highliner.item.name.change_height","with":[{"keybind":"key.use"}]}'}}

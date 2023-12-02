@@ -49,8 +49,8 @@ execute if score !lobby_rotate_distance constants < !lobby_rotate_target_distanc
 execute unless score !lobby_rotate_speed constants matches 1.. unless score !lobby_rotate_distance constants matches 1.. run return 0
 execute if score !lobby_rotate_speed constants matches 1.. as @e[tag=lobby_display_root] at @s run function highliner:lobby/refresh_displays/move/rotate
 tp @e[tag=lobby_display,tag=!lobby_display_root] @e[tag=lobby_display_root,limit=1]
-execute if score !lobby_rotate_distance constants matches 5000..11999 as @e[tag=lobby_display_root] at @s run particle minecraft:cloud ~ ~ ~ 0.5 0.5 0.5 0.2 25 force @a[tag=!replayer]
-execute if score !lobby_rotate_distance constants matches 12000..24999 as @e[tag=lobby_display_root] at @s run particle minecraft:cloud ~ ~ ~ 1 1 1 0.4 100 force @a[tag=!replayer]
-execute if score !lobby_rotate_distance constants matches 25000.. as @e[tag=lobby_display_root] at @s run particle minecraft:cloud ~ ~ ~ 2 2 2 1.6 1000 force @a[tag=!replayer]
+execute unless score !gamemode constants matches 3 if score !lobby_rotate_distance constants matches 5000..11999 as @e[tag=lobby_display_root] at @s run particle minecraft:cloud ~ ~ ~ 0.5 0.5 0.5 0.2 25 force @a
+execute unless score !gamemode constants matches 3 if score !lobby_rotate_distance constants matches 12000..24999 as @e[tag=lobby_display_root] at @s run particle minecraft:cloud ~ ~ ~ 1 1 1 0.4 100 force @a
+execute unless score !gamemode constants matches 3 if score !lobby_rotate_distance constants matches 25000.. as @e[tag=lobby_display_root] at @s run particle minecraft:cloud ~ ~ ~ 2 2 2 1.6 1000 force @a
 function highliner:lobby/create/tiny_interactions/move/main
 return 1

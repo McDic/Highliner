@@ -10,8 +10,7 @@ scoreboard players set @p[team=blueteam] turn 1
 execute unless score !forced_first_player constants matches 1..2 run scoreboard players set @r[scores={turn=1}] turn -1
 execute if score !forced_first_player constants matches 1 run scoreboard players set @p[team=redteam,scores={turn=1}] turn -1
 execute if score !forced_first_player constants matches 2 run scoreboard players set @p[team=blueteam,scores={turn=1}] turn -1
-scoreboard players operation !timer_red constants = !gamespeed_maxtime constants
-scoreboard players operation !timer_blue constants = !gamespeed_maxtime constants
+function highliner:game/full_timer
 
 # Board
 function highliner:game/board/reset/all
