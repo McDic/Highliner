@@ -12,3 +12,4 @@ scoreboard players operation !instant_placing constants = !instant_placing_origi
 
 # Reset
 function highliner:game/finalize/reset
+function highliner:lobby/refresh_displays/all

@@ -40,7 +40,10 @@ execute if score !gamemode constants matches 3 unless score !is_not_placeable co
 execute if score !gamemode constants matches 3 unless score !is_not_placeable constants matches 1 unless score !is_red_turn constants matches 1 run team modify placing_preview color aqua
 
 # Bridging shapes
-execute if score !is_not_placeable constants matches 0 if score !tried_bridging constants matches 1 if score !placing_direction constants matches 01 as @e[type=minecraft:slime,name="placing_preview",scores={placing=0,placing_dx=1..2,placing_dz=0}] at @s run tp @s ~ ~ ~01
-execute if score !is_not_placeable constants matches 0 if score !tried_bridging constants matches 1 if score !placing_direction constants matches 01 as @e[type=minecraft:slime,name="placing_preview",scores={placing=0,placing_dx=1..2,placing_dz=3}] at @s run tp @s ~ ~ ~-1
-execute if score !is_not_placeable constants matches 0 if score !tried_bridging constants matches 1 if score !placing_direction constants matches -1 as @e[type=minecraft:slime,name="placing_preview",scores={placing=0,placing_dz=1..2,placing_dx=0}] at @s run tp @s ~01 ~ ~
-execute if score !is_not_placeable constants matches 0 if score !tried_bridging constants matches 1 if score !placing_direction constants matches -1 as @e[type=minecraft:slime,name="placing_preview",scores={placing=0,placing_dz=1..2,placing_dx=3}] at @s run tp @s ~-1 ~ ~
+scoreboard players set !need_bridge_preview constants 0
+execute if score !need_bridge_preview constants matches 0 if score !is_not_placeable constants matches 0 if score !tried_bridging constants matches 1 run scoreboard players set !need_bridge_preview constants 1
+execute if score !need_bridge_preview constants matches 0 if score !gamemode constants matches 3 unless score !is_not_placeable constants matches 1 store result score !need_bridge_preview constants at @s run function highliner:game/board/check/is_any_bridge_without_clone
+execute unless score !need_bridge_preview constants matches 0 if score !placing_direction constants matches 01 as @e[type=minecraft:slime,name="placing_preview",scores={placing=0,placing_dx=1..2,placing_dz=0}] at @s run tp @s ~ ~ ~01
+execute unless score !need_bridge_preview constants matches 0 if score !placing_direction constants matches 01 as @e[type=minecraft:slime,name="placing_preview",scores={placing=0,placing_dx=1..2,placing_dz=3}] at @s run tp @s ~ ~ ~-1
+execute unless score !need_bridge_preview constants matches 0 if score !placing_direction constants matches -1 as @e[type=minecraft:slime,name="placing_preview",scores={placing=0,placing_dz=1..2,placing_dx=0}] at @s run tp @s ~01 ~ ~
+execute unless score !need_bridge_preview constants matches 0 if score !placing_direction constants matches -1 as @e[type=minecraft:slime,name="placing_preview",scores={placing=0,placing_dz=1..2,placing_dx=3}] at @s run tp @s ~-1 ~ ~

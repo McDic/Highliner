@@ -49,9 +49,13 @@ title @a times 0s 2s 2s
 # Bossbar
 function highliner:game/bossbar/init
 
+# Lobby
+function highliner:lobby/refresh_displays/all
+
 # Placing
 execute positioned 0 72 0 run function highliner:game/placing/init
 
 # Board
 function highliner:game/board/reset/all
+scoreboard players set !replay_jump_speed constants 1
 function highliner:replay/progress/forward

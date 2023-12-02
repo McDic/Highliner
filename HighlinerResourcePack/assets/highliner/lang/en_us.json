@@ -75,6 +75,8 @@
     "highliner.gamestatus.settings.theme": "- Tile theme: %s",
     "highliner.gamestatus.settings.instant_placing.enabled": "- Instant placing is enabled.",
     "highliner.gamestatus.settings.instant_placing.disabled": "- Instant placing is disabled.",
+    "highliner.gamestatus.settings.timeout_penalty.skip_turn": "- Your turn will be skipped on timeout.",
+    "highliner.gamestatus.settings.timeout_penalty.lose": "- You will lose on timeout.",
     "highliner.item.name.rotate": "Rotate (%s)",
     "highliner.item.name.place": "Place (%s)",
     "highliner.item.name.surrender": "Surrender (%s)",
@@ -111,6 +113,9 @@
     "highliner.lobby.text.settings.instant_placing": "Instant Placing: %s",
     "highliner.lobby.text.settings.instant_placing.enabled": "Enabled",
     "highliner.lobby.text.settings.instant_placing.disabled": "Disabled",
+    "highliner.lobby.text.settings.timeout_penalty": "Timeout Penalty: %s",
+    "highliner.lobby.text.settings.timeout_penalty.skip_turn": "Skip Turn",
+    "highliner.lobby.text.settings.timeout_penalty.lose": "Lose",
     "highliner.lobby.text.settings.reset": "Reset Everything",
     "highliner.lobby.text.replay.title": "Replay",
     "highliner.lobby.text.replay.title_in": "Replay of Match <%s-%s-%s-%s>",
@@ -137,5 +142,6 @@
     "highliner.message.out_of_time.skipped": "You ran out of time, so your turn is skipped.",
     "highliner.message.replay.delete.success": "Replay of match <%s-%s-%s-%s> is successfully deleted!",
     "highliner.message.replay.delete.failed": "Failed to delete the replay for unknown reason.",
-    "highliner.message.replay.delete.empty": "Since no replay is available, you can't delete!"
+    "highliner.message.replay.delete.empty": "Since no replay is available, you can't delete!",
+    "highliner.message.both_skipped": "Both players skipped the turn. Ending the game!"
 }

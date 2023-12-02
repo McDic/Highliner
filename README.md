@@ -49,7 +49,7 @@ The following is the structure of `highliner:saved_matches`.
                     timer_red: int, // Red timer after this move
                     timer_blue: int, // Blue timer after this move
                     is_red_placed: bool, // Did red placed this?
-                    placing_direction: int, // (1 = X or -1 = Z)
+                    placing_direction: int, // (1 = X or -1 = Z or 0 = SKIPPED)
                     x: double, // Placed X coordination
                     z: double, // Placed Z coordination
                     state_changes: [ // List of all tile changes.

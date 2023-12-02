@@ -21,3 +21,6 @@ execute if score !tile_theme constants matches 2 run tellraw @a {"translate":"hi
 execute if score !tile_theme constants matches 3 run tellraw @a {"translate":"highliner.gamestatus.settings.theme","color":"yellow","italic":true,"with":[{"translate":"highliner.lobby.text.settings.theme.terracotta"}]}
 execute if score !tile_theme constants matches 4 run tellraw @a {"translate":"highliner.gamestatus.settings.theme","color":"yellow","italic":true,"with":[{"translate":"highliner.lobby.text.settings.theme.ore"}]}
 execute if score !tile_theme constants matches 5 run tellraw @a {"translate":"highliner.gamestatus.settings.theme","color":"yellow","italic":true,"with":[{"translate":"highliner.lobby.text.settings.theme.hyphae"}]}
+
+execute if score !timeout_penalty constants matches 0 run tellraw @a {"translate":"highliner.gamestatus.settings.timeout_penalty.lose","color":"yellow","italic":true}
+execute if score !timeout_penalty constants matches 1 run tellraw @a {"translate":"highliner.gamestatus.settings.timeout_penalty.skip_turn","color":"yellow","italic":true}

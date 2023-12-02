@@ -16,6 +16,8 @@ function highliner:settings/tell
 scoreboard players set !gamemode constants 1
 scoreboard objectives remove turn
 scoreboard objectives add turn dummy
+scoreboard players set !previously_skipped constants 0
+scoreboard players set !placing_direction constants 1
 
 # Playsound
 execute as @a at @s run playsound minecraft:entity.player.levelup master @s

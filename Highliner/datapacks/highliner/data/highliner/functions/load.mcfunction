@@ -124,6 +124,7 @@ scoreboard players set !instant_placing constants -1
 scoreboard players set !max_match_saves constants 20
 scoreboard players set !selected_replay_index constants -1
 scoreboard players set !replay_jump_speed constants 0
+scoreboard players set !timeout_penalty constants 0
 
 # Teams
 team remove spectators
@@ -150,7 +151,6 @@ advancement revoke @a everything
 # Remove schedules
 schedule clear highliner:tutorial/main
 schedule clear highliner:game/board/refresh
-schedule clear highliner:game/record/diff/flush
 
 # Settings
 function highliner:settings/maxturn
@@ -160,6 +160,7 @@ function highliner:settings/forced_first_player
 function highliner:settings/tile_theme
 function highliner:settings/instant_placing
 function highliner:settings/replay_jump_speed
+function highliner:settings/timeout_penalty
 
 # Board
 function highliner:game/board/reset/all

@@ -17,11 +17,11 @@ execute if score !turn constants > !target_turn constants run scoreboard players
 execute store result storage highliner:temp_storage temp_args.diff_index int 1 run scoreboard players get !turn constants
 execute if score !turn constants >= !target_turn constants run scoreboard players add !turn constants 1
 
-# Single move; Including refreshing a board and change turn value.
+# Single move; Including refreshing a board and change turn value. Don't load when `!placing_direction` is 0.
 function highliner:replay/progress/load with storage highliner:temp_storage temp_args
 execute store result score !state_changes_length constants run data get storage highliner:temp_storage temp_diff.state_changes
 function highliner:game/get_turn
-execute summon minecraft:marker run function highliner:replay/progress/unit_diff {index: 0}
+execute unless score !placing_direction constants matches 0 summon minecraft:marker run function highliner:replay/progress/unit_diff {index: 0}
 execute if score !turn constants < !target_turn constants run scoreboard players add !turn constants 1
 execute if score !turn constants > !target_turn constants run scoreboard players remove !turn constants 1
 

@@ -20,3 +20,6 @@ whitelist.json
 
 # Profiles
 debug/
+
+# Resourcepack archives
+resourcepack_archives/

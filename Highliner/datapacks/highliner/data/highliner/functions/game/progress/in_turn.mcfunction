@@ -20,8 +20,10 @@ scoreboard players set !cold_end_flag constants 0
 execute unless entity @p[team=redteam] unless entity @p[team=blueteam] run scoreboard players set !cold_end_flag constants -1
 # execute unless entity @p[team=redteam] if entity @p[team=blueteam] run scoreboard players set !cold_end_flag constants 4
 # execute if entity @p[team=redteam] unless entity @p[team=blueteam] run scoreboard players set !cold_end_flag constants 1
-execute if score !cold_end_flag constants matches 0 if score !timer_red constants matches ..0 run scoreboard players set !cold_end_flag constants 6
-execute if score !cold_end_flag constants matches 0 if score !timer_blue constants matches ..0 run scoreboard players set !cold_end_flag constants 3
+execute if score !cold_end_flag constants matches 0 if score !timer_red constants matches ..0 unless entity @p[team=redteam] run scoreboard players set !cold_end_flag constants 6
+execute if score !cold_end_flag constants matches 0 if score !timer_blue constants matches ..0 unless entity @p[team=blueteam] run scoreboard players set !cold_end_flag constants 3
+execute if score !cold_end_flag constants matches 0 if score !timer_red constants matches ..0 if entity @p[team=readteam] if score !timeout_penalty constants matches 0 run scoreboard players set !cold_end_flag constants 6
+execute if score !cold_end_flag constants matches 0 if score !timer_blue constants matches ..0 if entity @p[team=blueteam] if score !timeout_penalty constants matches 0 run scoreboard players set !cold_end_flag constants 3
 execute if score !cold_end_flag constants matches 0 if entity @p[team=redteam,scores={surrendered=1..}] unless score !both_player_exists constants matches 0 run scoreboard players set !cold_end_flag constants 5
 execute if score !cold_end_flag constants matches 0 if entity @p[team=blueteam,scores={surrendered=1..}] unless score !both_player_exists constants matches 0 run scoreboard players set !cold_end_flag constants 2
 execute if score !cold_end_flag constants matches 0 if entity @p[team=redteam,scores={surrendered=1..}] if score !both_player_exists constants matches 0 run scoreboard players set !cold_end_flag constants -2
@@ -47,7 +49,7 @@ execute if score !cold_end_flag constants matches 1..3 run function highliner:ga
 execute if score !cold_end_flag constants matches 4..6 run function highliner:game/finalize/blue_win
 execute if score !cold_end_flag constants matches 7 run function highliner:game/finalize/red_win
 execute if score !cold_end_flag constants matches 8 run function highliner:game/finalize/blue_win
-execute unless score !cold_end_flag constants matches 0 run function highliner:game/finalize/common
 
 # Go to inner progress
+execute unless score !cold_end_flag constants matches 0 run function highliner:game/finalize/common
 execute if score !cold_end_flag constants matches 0 run function highliner:game/progress/inner
