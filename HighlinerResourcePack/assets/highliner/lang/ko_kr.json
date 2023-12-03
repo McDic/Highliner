@@ -141,7 +141,7 @@
     "highliner.error.replay.max_turn_exceeded": "최대 턴이 %s턴으로 설정되어 있으므로, 이 시점에서 게임을 시작하실 수 없습니다.",
     "highliner.error.replay.half_dominated": "절반 이상의 타일이 한 플레이어에 의해 점령되었으므로, 이 시점에서 게임을 시작하실 수 없습니다.",
     "highliner.message.replay.timer_truncated": "현재 게임 속도 설정과의 호환을 위해 당신의 타이머가 일정량 감소합니다.",
-    "highliner.message.out_of_time.skipped": "당신의 시간이 모두 소모되었습니다. 아무 설치가 일어나지 않은 채로 다음 턴으로 넘어갑니다.",
+    "highliner.message.out_of_time.skipped": "%s의 시간이 모두 소모되었습니다. 아무 설치가 일어나지 않은 채로 다음 턴으로 넘어갑니다.",
     "highliner.message.replay.delete.success": "매치 <%s-%s-%s-%s> 리플레이가 성공적으로 제거되었습니다.",
     "highliner.message.replay.delete.failed": "알 수 없는 이유로 매치 리플레이를 제거하지 못했습니다.",
     "highliner.message.replay.delete.empty": "제거할 리플레이가 없습니다.",

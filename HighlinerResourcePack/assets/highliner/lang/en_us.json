@@ -141,7 +141,7 @@
     "highliner.error.replay.max_turn_exceeded": "You can't start a new match from here, because the current max turn setting is %s turns.",
     "highliner.error.replay.half_dominated": "You can't start a new match from here, because more than half of the all tiles are dominated by one team.",
     "highliner.message.replay.timer_truncated": "Your timer will be reduced to respect your current settings.",
-    "highliner.message.out_of_time.skipped": "You ran out of time, so your turn is skipped.",
+    "highliner.message.out_of_time.skipped": "%s ran out of time, so the turn is skipped.",
     "highliner.message.replay.delete.success": "Replay of match <%s-%s-%s-%s> is successfully deleted!",
     "highliner.message.replay.delete.failed": "Failed to delete the replay for unknown reason.",
     "highliner.message.replay.delete.empty": "Since no replay is available, you can't delete!",
