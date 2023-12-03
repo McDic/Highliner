@@ -27,7 +27,8 @@
                                     "highliner:ingame/bridged/100": true,
                                     "highliner:ingame/domination/huge_move": true,
                                     "highliner:ingame/domination/more_than_half": true,
-                                    "highliner:max_rotation_speed": true
+                                    "highliner:max_rotation_speed": true,
+                                    "highliner:replay/resume": true
                                 }
                             }
                         }
