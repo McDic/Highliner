@@ -1,0 +1,13 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:golden_boots"
+        },
+        "title": {"translate": "highliner.advancements.title.start_match"},
+        "description": {"translate": "highliner.advancements.desc.start_match"}
+    },
+    "parent": "highliner:welcome",
+    "criteria": {
+        "impossible": {"trigger": "minecraft:impossible"}
+    }
+}

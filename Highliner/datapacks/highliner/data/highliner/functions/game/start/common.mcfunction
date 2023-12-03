@@ -18,6 +18,10 @@ scoreboard objectives remove turn
 scoreboard objectives add turn dummy
 scoreboard players set !previously_skipped constants 0
 scoreboard players set !placing_direction constants 1
+scoreboard players set !prev_claimed_red constants 0
+scoreboard players set !prev_claimed_blue constants 0
+scoreboard players set !prev_dominated_red constants 0
+scoreboard players set !prev_dominated_blue constants 0
 
 # Playsound
 execute as @a at @s run playsound minecraft:entity.player.levelup master @s
@@ -30,3 +34,6 @@ function highliner:lobby/create/nonidle
 
 # Bossbar
 function highliner:game/bossbar/init
+
+# Advancement
+advancement grant @a[team=!spectators] until highliner:start_match

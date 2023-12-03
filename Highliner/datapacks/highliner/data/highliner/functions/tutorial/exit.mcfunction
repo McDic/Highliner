@@ -8,4 +8,5 @@ scoreboard players operation !disable_x22 constants = !disable_x22_original cons
 scoreboard players operation !instant_placing constants = !instant_placing_original constants
 
 # Common reset
+advancement grant @a until highliner:attend_tutorial
 function highliner:game/finalize/reset

@@ -21,9 +21,9 @@ title @a actionbar {"translate":"highliner.gamestatus.current","color":"yellow",
 function highliner:game/bossbar/update
 
 # Move forward or backward
-execute as @p[,scores={used_item_backward=1..}] run function highliner:replay/progress/backward
-execute as @p[,scores={used_item_forward=1..}] run function highliner:replay/progress/forward
-execute as @p[,scores={rotated=1..}] run function highliner:settings/replay_jump_speed
+execute as @p[scores={used_item_backward=1..}] run function highliner:replay/progress/backward
+execute as @p[scores={used_item_forward=1..}] run function highliner:replay/progress/forward
+execute as @p[scores={rotated=1..}] run function highliner:settings/replay_jump_speed
 execute as @a[scores={used_item_backward=1..}] run function highliner:game/items/reset
 execute as @a[scores={used_item_forward=1..}] run function highliner:game/items/reset
 execute as @a[scores={rotated=1..}] run function highliner:game/items/reset

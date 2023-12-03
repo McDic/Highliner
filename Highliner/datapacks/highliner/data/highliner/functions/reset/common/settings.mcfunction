@@ -1,0 +1,9 @@
+# Settings
+function highliner:settings/maxturn
+function highliner:settings/gamespeed
+function highliner:settings/x22
+function highliner:settings/forced_first_player
+function highliner:settings/tile_theme
+function highliner:settings/instant_placing
+function highliner:settings/replay_jump_speed
+function highliner:settings/timeout_penalty

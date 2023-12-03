@@ -5,7 +5,14 @@ schedule clear highliner:game/progress/start_turn/wait
 function highliner:game/board/refresh
 function highliner:game/record/diff/flush
 
+# Score calculation and save prev claimed/dominated
 function highliner:game/progress/calculate_score/main
+scoreboard players operation !prev_claimed_red constants = !claimed_red constants
+scoreboard players operation !prev_dominated_red constants = !dominated_red constants
+scoreboard players operation !prev_claimed_blue constants = !claimed_blue constants
+scoreboard players operation !prev_dominated_blue constants = !dominated_blue constants
+
+# Refresh placing
 function highliner:game/placing/init
 
 schedule clear highliner:game/progress/timer/reduce

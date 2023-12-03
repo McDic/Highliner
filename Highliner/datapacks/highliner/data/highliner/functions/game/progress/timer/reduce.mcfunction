@@ -1,6 +1,8 @@
 # If both players exist, reduce current timer.
 function highliner:game/progress/load_all_scores
 execute if entity @p[team=redteam] if entity @p[team=blueteam] run scoreboard players remove !timer_temp constants 1
+execute if entity @p[team=redteam] if entity @p[team=blueteam] run scoreboard players add @a[team=!spectators,scores={turn=1}] thinking_time 1
+advancement grant @a[team=!spectators,scores={thinking_time=1800..}] until highliner:ingame/long_thinking
 function highliner:game/progress/timer/save
 
 # If any player left, reduce those timer, regardless of their turn.

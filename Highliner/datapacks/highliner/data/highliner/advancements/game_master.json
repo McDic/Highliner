@@ -1,0 +1,42 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:bell"
+        },
+        "frame": "challenge",
+        "title": {"translate": "highliner.advancements.title.game_master"},
+        "description": {"translate": "highliner.advancements.desc.game_master"}
+    },
+    "parent": "highliner:welcome",
+    "criteria": {
+        "other_advancements": {
+            "trigger": "minecraft:tick",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "type": "minecraft:player",
+                            "type_specific": {
+                                "type": "player",
+                                "advancements": {
+                                    "highliner:ingame/claimed/1000": true,
+                                    "highliner:win/20": true,
+                                    "highliner:win/absolutely": true,
+                                    "highliner:ingame/bridged/100": true,
+                                    "highliner:ingame/domination/huge_move": true,
+                                    "highliner:ingame/domination/more_than_half": true,
+                                    "highliner:max_rotation_speed": true
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "highliner:game/items/reset"
+    }
+}

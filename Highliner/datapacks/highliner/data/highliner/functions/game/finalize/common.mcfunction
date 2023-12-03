@@ -1,5 +1,8 @@
 function highliner:game/placing/exit
 
+# Advancements
+function highliner:advancements/winnings
+
 # Dump the current match
 execute if score !gamemode constants matches 1 run function highliner:game/record/dump
 

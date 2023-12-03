@@ -1,0 +1,14 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:anvil"
+        },
+        "frame": "goal",
+        "title": {"translate": "highliner.advancements.title.ingame.bridged.1"},
+        "description": {"translate": "highliner.advancements.desc.ingame.bridged.1"}
+    },
+    "parent": "highliner:ingame/claimed/1",
+    "criteria": {
+        "impossible": {"trigger": "minecraft:impossible"}
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:goat_horn"
+        },
+        "frame": "challenge",
+        "title": {"translate": "highliner.advancements.title.max_rotation_speed"},
+        "description": {"translate": "highliner.advancements.desc.max_rotation_speed"},
+        "hidden": true
+    },
+    "parent": "highliner:welcome",
+    "criteria": {
+        "always": {"trigger": "minecraft:impossible"}
+    }
+}

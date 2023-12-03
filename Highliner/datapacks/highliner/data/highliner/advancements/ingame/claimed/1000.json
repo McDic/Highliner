@@ -1,0 +1,14 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:red_wool"
+        },
+        "frame": "challenge",
+        "title": {"translate": "highliner.advancements.title.ingame.claimed.1000"},
+        "description": {"translate": "highliner.advancements.desc.ingame.claimed.1000"}
+    },
+    "parent": "highliner:ingame/claimed/1",
+    "criteria": {
+        "impossible": {"trigger": "minecraft:impossible"}
+    }
+}

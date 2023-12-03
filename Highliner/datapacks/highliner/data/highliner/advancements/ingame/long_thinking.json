@@ -1,0 +1,15 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:turtle_helmet"
+        },
+        "frame": "goal",
+        "title": {"translate": "highliner.advancements.title.ingame.long_thinking"},
+        "description": {"translate": "highliner.advancements.desc.ingame.long_thinking"},
+        "hidden": true
+    },
+    "parent": "highliner:start_match",
+    "criteria": {
+        "always": {"trigger": "minecraft:impossible"}
+    }
+}

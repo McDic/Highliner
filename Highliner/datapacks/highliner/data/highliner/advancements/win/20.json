@@ -1,0 +1,14 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:arrow"
+        },
+        "frame": "goal",
+        "title": {"translate": "highliner.advancements.title.win.20"},
+        "description": {"translate": "highliner.advancements.desc.win.20"}
+    },
+    "parent": "highliner:win/1",
+    "criteria": {
+        "always": {"trigger": "minecraft:impossible"}
+    }
+}

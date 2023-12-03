@@ -1,0 +1,14 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:golden_chestplate"
+        },
+        "frame": "goal",
+        "title": {"translate": "highliner.advancements.title.replay.resume"},
+        "description": {"translate": "highliner.advancements.desc.replay.resume"}
+    },
+    "parent": "highliner:replay/start",
+    "criteria": {
+        "impossible": {"trigger": "minecraft:impossible"}
+    }
+}

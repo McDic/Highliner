@@ -1,0 +1,15 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:spectral_arrow"
+        },
+        "frame": "challenge",
+        "title": {"translate": "highliner.advancements.title.win.absolutely"},
+        "description": {"translate": "highliner.advancements.desc.win.absolutely"},
+        "hidden": true
+    },
+    "parent": "highliner:win/1",
+    "criteria": {
+        "always": {"trigger": "minecraft:impossible"}
+    }
+}

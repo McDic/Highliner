@@ -22,3 +22,6 @@ execute if score !gamemode constants matches 0 run function highliner:loop/idle
 execute if score !gamemode constants matches 1 run function highliner:loop/ingame
 execute if score !gamemode constants matches 2 run function highliner:loop/tutorial
 execute if score !gamemode constants matches 3 run function highliner:loop/replay
+
+# Advancements
+function highliner:advancements/etc

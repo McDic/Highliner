@@ -20,6 +20,9 @@ execute if score !timer_blue constants >= !gamespeed_maxtime constants run tellr
 scoreboard players operation !timer_blue constants < !gamespeed_maxtime constants
 scoreboard players operation !instant_placing constants = !instant_placing_original constants
 
+# Advancements
+advancement grant @a[team=!spectators] until highliner:replay/resume
+
 # Just update a match id, remove all further diffs and go
 function highliner:game/record/assign_match_id
 data modify storage highliner:temp_storage temp_args set value {}

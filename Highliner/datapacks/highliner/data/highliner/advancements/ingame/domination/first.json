@@ -1,0 +1,14 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:magenta_wool"
+        },
+        "frame": "goal",
+        "title": {"translate": "highliner.advancements.title.ingame.domination.first"},
+        "description": {"translate": "highliner.advancements.desc.ingame.domination.first"}
+    },
+    "parent": "highliner:ingame/claimed/1",
+    "criteria": {
+        "impossible": {"trigger": "minecraft:impossible"}
+    }
+}

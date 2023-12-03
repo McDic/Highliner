@@ -6,6 +6,8 @@ worldborder warning distance 0
 # Scoreboard
 scoreboard objectives remove turn
 scoreboard objectives add turn dummy
+scoreboard objectives remove thinking_time
+scoreboard objectives add thinking_time dummy
 scoreboard players set !gamemode constants 0
 
 # Bottom

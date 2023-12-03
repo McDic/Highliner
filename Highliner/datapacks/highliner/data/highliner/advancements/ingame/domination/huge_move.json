@@ -1,0 +1,15 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:magenta_wool"
+        },
+        "frame": "challenge",
+        "title": {"translate": "highliner.advancements.title.ingame.domination.huge_move"},
+        "description": {"translate": "highliner.advancements.desc.ingame.domination.huge_move"},
+        "hidden": true
+    },
+    "parent": "highliner:ingame/domination/first",
+    "criteria": {
+        "impossible": {"trigger": "minecraft:impossible"}
+    }
+}

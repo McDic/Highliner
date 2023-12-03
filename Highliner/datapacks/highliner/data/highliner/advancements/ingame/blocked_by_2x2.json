@@ -1,0 +1,13 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:barrier"
+        },
+        "title": {"translate": "highliner.advancements.title.ingame.blocked_by_2x2"},
+        "description": {"translate": "highliner.advancements.desc.ingame.blocked_by_2x2"}
+    },
+    "parent": "highliner:start_match",
+    "criteria": {
+        "impossible": {"trigger": "minecraft:impossible"}
+    }
+}

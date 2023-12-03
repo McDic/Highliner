@@ -1,0 +1,13 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:enchanted_book"
+        },
+        "title": {"translate": "highliner.advancements.title.attend_tutorial"},
+        "description": {"translate": "highliner.advancements.desc.attend_tutorial"}
+    },
+    "parent": "highliner:welcome",
+    "criteria": {
+        "impossible": {"trigger": "minecraft:impossible"}
+    }
+}

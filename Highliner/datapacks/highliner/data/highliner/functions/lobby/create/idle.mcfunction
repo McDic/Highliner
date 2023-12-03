@@ -41,3 +41,6 @@ function highliner:settings/tile_theme
 scoreboard players set !current_lobby_menu constants 0
 scoreboard players set !current_lobby_selection constants 4
 function highliner:lobby/refresh_displays/all
+
+# Add sidebar
+scoreboard objectives setdisplay sidebar wincount

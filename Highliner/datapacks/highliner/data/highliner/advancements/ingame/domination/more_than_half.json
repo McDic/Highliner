@@ -1,0 +1,15 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:red_banner"
+        },
+        "frame": "challenge",
+        "title": {"translate": "highliner.advancements.title.ingame.domination.more_than_half"},
+        "description": {"translate": "highliner.advancements.desc.ingame.domination.more_than_half"},
+        "hidden": true
+    },
+    "parent": "highliner:ingame/domination/first",
+    "criteria": {
+        "impossible": {"trigger": "minecraft:impossible"}
+    }
+}
