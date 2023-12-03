@@ -10,6 +10,7 @@ execute as @e[type=minecraft:item_display,tag=lobby_display,tag=lobby_display_le
 execute as @e[type=minecraft:item_display,tag=lobby_display,tag=lobby_display_rightarrow] run data modify entity @s item.id set value "minecraft:golden_chestplate"
 execute as @e[type=minecraft:item_display,tag=lobby_display,tag=lobby_display_down] run data modify entity @s item.id set value "minecraft:golden_boots"
 execute as @e[type=minecraft:item_display,tag=lobby_display,tag=lobby_display_change] run data modify entity @s item.id set value "minecraft:barrier"
+execute as @e[type=minecraft:item_display,tag=lobby_display] run data remove entity @s item.tag
 
 # Lobby menu 0: Highliner Remastered
 # - Join Red Team
