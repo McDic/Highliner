@@ -3,7 +3,7 @@
 # Flush if needed
 # skip_save_diff guard is provided because this function is called on the first of the game, where no diff is available.
 function highliner:game/board/refresh
-execute unless score !skip_save_diff constants matches 0 run function highliner:game/record/diff/flush
+execute if score !skip_save_diff constants matches 0 run function highliner:game/record/diff/flush
 scoreboard players set !skip_save_diff constants 0
 
 # 0 tie, 1 red wins, 2 blue wins

@@ -8,10 +8,7 @@ bossbar set highliner:time_red color yellow
 bossbar set highliner:time_blue color yellow
 bossbar set highliner:score_red color red
 bossbar set highliner:score_blue color blue
-bossbar set highliner:time_red players @a
-bossbar set highliner:time_blue players @a
-bossbar set highliner:score_red players @a[team=redteam]
-bossbar set highliner:score_blue players @a[team=blueteam]
+
 execute if score !gamespeed constants matches 0 run bossbar set highliner:time_red style notched_20
 execute if score !gamespeed constants matches 0 run bossbar set highliner:time_blue style notched_20
 execute if score !gamespeed constants matches 1 run bossbar set highliner:time_red style notched_12

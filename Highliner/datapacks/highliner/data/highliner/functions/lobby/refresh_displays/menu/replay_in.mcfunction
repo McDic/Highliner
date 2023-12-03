@@ -13,6 +13,6 @@ execute as @e[type=minecraft:text_display,tag=lobby_display_text1] run data modi
 execute as @e[type=minecraft:item_display,tag=lobby_display,tag=lobby_display_leftarrow] run data modify entity @s item.id set value "minecraft:barrier"
 execute as @e[type=minecraft:item_display,tag=lobby_display,tag=lobby_display_rightarrow] run data modify entity @s item.id set value "minecraft:barrier"
 
-execute if score !current_lobby_selection constants matches 3 as @e[type=minecraft:item_display,tag=lobby_display,tag=lobby_display_change] run data modify entity @s item.id set value "minecraft:ender_pearl"
+execute if score !current_lobby_selection constants matches 3 as @e[type=minecraft:item_display,tag=lobby_display,tag=lobby_display_change] run data modify entity @s item.id set value "minecraft:diamond_boots"
 execute if score !current_lobby_selection constants matches 2 as @e[type=minecraft:item_display,tag=lobby_display,tag=lobby_display_change] run data modify entity @s item.id set value "minecraft:iron_boots"
 execute if score !current_lobby_selection constants matches 1 as @e[type=minecraft:item_display,tag=lobby_display,tag=lobby_display_change] run data modify entity @s item.id set value "minecraft:ender_pearl"

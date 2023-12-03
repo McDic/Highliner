@@ -12,7 +12,10 @@ function highliner:game/board/bridgefill/main
 scoreboard players remove !tile_theme constants 1
 function highliner:settings/tile_theme
 function highliner:game/progress/calculate_score/main
-execute as @e[type=minecraft:marker,name="placing_preview",scores={placing=0},limit=1] at @s run function highliner:game/placing/preview
+execute unless score !placing_direction constants matches 0 as @e[type=minecraft:slime,name="placing_preview"] run data modify entity @s Glowing set value true
+execute unless score !placing_direction constants matches 0 as @e[type=minecraft:marker,name="placing_preview",scores={placing=0},limit=1] at @s run function highliner:game/placing/preview
+execute if score !placing_direction constants matches 0 as @e[type=minecraft:slime,name="placing_preview"] run data modify entity @s Glowing set value false
 
 # Now give free again
 scoreboard players set !moving_turn_in_progress constants 0
+execute as @a run function highliner:game/items/reset

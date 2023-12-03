@@ -1,10 +1,18 @@
 # Title display
-execute if entity @p[team=redteam] run bossbar set highliner:time_red name {"translate":"highliner.bossbar.time_left_spec","with":[{"selector":"@p[team=redteam]"}],"color":"dark_red"}
-execute if entity @p[team=blueteam] run bossbar set highliner:time_blue name {"translate":"highliner.bossbar.time_left_spec","with":[{"selector":"@p[team=blueteam]"}],"color":"aqua"}
+execute if score !gamemode constants matches 1 if entity @p[team=redteam] run bossbar set highliner:time_red name {"translate":"highliner.bossbar.time_left_spec","with":[{"selector":"@p[team=redteam]"}],"color":"dark_red"}
+execute if score !gamemode constants matches 1 if entity @p[team=blueteam] run bossbar set highliner:time_blue name {"translate":"highliner.bossbar.time_left_spec","with":[{"selector":"@p[team=blueteam]"}],"color":"aqua"}
+execute unless score !gamemode constants matches 1 run bossbar set highliner:time_red name {"translate":"highliner.bossbar.time_left_spec","with":[{"translate":"highliner.redteam"}],"color":"dark_red"}
+execute unless score !gamemode constants matches 1 run bossbar set highliner:time_blue name {"translate":"highliner.bossbar.time_left_spec","with":[{"translate":"highliner.blueteam"}],"color":"aqua"}
 execute unless entity @p[team=redteam] run bossbar set highliner:time_red name {"translate":"highliner.bossbar.time_left_spec","with":[{"translate":"highliner.redteam"}],"color":"dark_red"}
 execute unless entity @p[team=blueteam] run bossbar set highliner:time_blue name {"translate":"highliner.bossbar.time_left_spec","with":[{"translate":"highliner.blueteam"}],"color":"aqua"}
 execute store result bossbar highliner:time_red value run scoreboard players get !timer_red constants
 execute store result bossbar highliner:time_blue value run scoreboard players get !timer_blue constants
+
+# Players
+bossbar set highliner:time_red players @a
+bossbar set highliner:time_blue players @a
+execute if score !gamemode constants matches 1 run bossbar set highliner:score_red players @a[team=redteam]
+execute if score !gamemode constants matches 1 run bossbar set highliner:score_blue players @a[team=blueteam]
 
 # Focus on colored
 function highliner:game/get_turn

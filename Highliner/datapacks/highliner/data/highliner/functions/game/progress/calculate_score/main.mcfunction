@@ -16,4 +16,4 @@ execute unless score !is_red_turn constants matches 1 run scoreboard players ope
 execute unless score !is_red_turn constants matches 1 run scoreboard players operation !dominated_red constants = !dominated_opponent constants
 
 # Give advancements whenever it works
-execute if score !gamemode constants matches 1 run function highliner:advancements/score_diff
+execute if score !gamemode constants matches 1 run function highliner:advancements/score
