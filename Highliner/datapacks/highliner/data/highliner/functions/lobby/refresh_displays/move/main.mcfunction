@@ -11,6 +11,7 @@ scoreboard players operation !temp_factor constants = !slow_sqrt constants
 scoreboard players remove !temp_factor constants 5
 scoreboard players operation !temp_factor constants > !0 constants
 execute unless score !gamemode constants matches 0 run scoreboard players set !temp_factor constants 0
+execute unless entity @p run scoreboard players set !temp_factor constants 0
 
 # Lobby rotate target speed: x -> x/1000 angle per tick. x = pow(2, temp_factor / 9) * 1500 if temp_factor > 0 else 0.
 # Lobby rotate target distance: x -> x/1000 blocks. x = temp_factor * 750
