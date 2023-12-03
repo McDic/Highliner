@@ -148,7 +148,11 @@ The following is the structure of `highliner:saved_matches`.
 
 - Added new playsound on some situations like placing failure and lobby interaction.
 - Added replay mode; Now you can replay the latest match, and start the game again in exactly same game state. (Possibly with some different settings)
-    - You can replay a match.
 - Completely reworked on lobby; Now the lobby uses display and interaction entities.
 - Reworked on admin functions like lobby locking. (This should not affect Realms)
 - Added instant placing mode.
+
+### Highliner 2.7 (ADVANCEMENTS)
+
+- Added advancements.
+- Many minor lobby reworks and stability patches.
