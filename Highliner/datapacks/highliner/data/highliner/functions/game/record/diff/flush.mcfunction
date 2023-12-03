@@ -1,7 +1,3 @@
-# If skip save diff, do nothing
-execute unless score !skip_save_diff constants matches 0 run return 0
-scoreboard players set !skip_save_diff constants 0
-
 # After placing, apply all differences and add current diff.
 execute store result score !temp_current_diff_placing_direction constants run data get storage highliner:current_diff placing_direction
 

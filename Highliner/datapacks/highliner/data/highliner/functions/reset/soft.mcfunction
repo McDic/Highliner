@@ -8,6 +8,10 @@ function highliner:reset/common/gamerule
 function highliner:reset/common/worldborder
 function highliner:reset/common/forceload
 
+# Welcome should be resetted anyway
+scoreboard objectives remove welcome
+scoreboard objectives add welcome minecraft.custom:leave_game
+
 # Common suffices
 function highliner:reset/common/constants
 function highliner:reset/common/remove_schedules
