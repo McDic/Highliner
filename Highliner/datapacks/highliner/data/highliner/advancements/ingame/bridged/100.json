@@ -3,7 +3,7 @@
         "icon": {
             "item": "minecraft:damaged_anvil"
         },
-        "frame": "challenge",
+        "frame": "goal",
         "title": {"translate": "highliner.advancements.title.ingame.bridged.100"},
         "description": {"translate": "highliner.advancements.desc.ingame.bridged.100"},
         "hidden": false

@@ -1,7 +1,7 @@
 {
     "display": {
         "icon": {
-            "item": "minecraft:magenta_wool"
+            "item": "minecraft:blue_wool"
         },
         "frame": "challenge",
         "title": {"translate": "highliner.advancements.title.ingame.domination.huge_move"},

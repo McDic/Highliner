@@ -1,7 +1,7 @@
 {
     "display": {
         "icon": {
-            "item": "minecraft:golden_chestplate"
+            "item": "minecraft:iron_boots"
         },
         "frame": "goal",
         "title": {"translate": "highliner.advancements.title.replay.resume"},

@@ -16,6 +16,8 @@ function highliner:settings/tell
 scoreboard players set !gamemode constants 1
 scoreboard objectives remove turn
 scoreboard objectives add turn dummy
+scoreboard objectives remove thinking_time
+scoreboard objectives add thinking_time dummy
 scoreboard players set !previously_skipped constants 0
 scoreboard players set !placing_direction constants 1
 scoreboard players set !prev_claimed_red constants 0

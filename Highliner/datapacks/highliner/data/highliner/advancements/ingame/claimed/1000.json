@@ -1,9 +1,9 @@
 {
     "display": {
         "icon": {
-            "item": "minecraft:red_wool"
+            "item": "minecraft:light_blue_wool"
         },
-        "frame": "challenge",
+        "frame": "goal",
         "title": {"translate": "highliner.advancements.title.ingame.claimed.1000"},
         "description": {"translate": "highliner.advancements.desc.ingame.claimed.1000"}
     },

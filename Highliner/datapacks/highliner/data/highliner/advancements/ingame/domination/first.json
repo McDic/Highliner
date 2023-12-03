@@ -3,7 +3,6 @@
         "icon": {
             "item": "minecraft:magenta_wool"
         },
-        "frame": "goal",
         "title": {"translate": "highliner.advancements.title.ingame.domination.first"},
         "description": {"translate": "highliner.advancements.desc.ingame.domination.first"}
     },
