@@ -7,6 +7,7 @@ function highliner:reset/common/prefix
 function highliner:reset/common/gamerule
 function highliner:reset/common/worldborder
 function highliner:reset/common/forceload
+function highliner:reset/common/sysdata
 
 # Welcome should be resetted anyway
 scoreboard objectives remove welcome

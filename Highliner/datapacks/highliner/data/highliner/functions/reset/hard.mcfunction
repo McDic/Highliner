@@ -9,6 +9,7 @@ function highliner:reset/common/prefix
 function highliner:reset/common/gamerule
 function highliner:reset/common/worldborder
 function highliner:reset/common/forceload
+function highliner:reset/common/sysdata
 
 # Advancements and objectives
 advancement revoke @a everything
