@@ -157,3 +157,5 @@ The following is the structure of `highliner:saved_matches`.
 - Added advancements.
 - Many minor lobby reworks and stability patches.
 - Added timeout penalty settings.
+- Updated Minecraft version to 1.20.4.
+- Fixed some minor translation issues.
